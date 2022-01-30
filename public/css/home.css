@@ -382,7 +382,8 @@ html::-webkit-scrollbar-thumb {
 .home .fa-cog {
     position: absolute;
     font-size: 30rem;
-    color: #4364db;
+    opacity: 0.15;
+    color: #fff;
     animation: rotate 10s linear infinite;
 }
 
@@ -835,7 +836,7 @@ textarea {
         top: 99%;
         left: 0;
         right: 0;
-        background: var(--main-color);
+        background: var(--white);
         border-bottom: var(--border);
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
