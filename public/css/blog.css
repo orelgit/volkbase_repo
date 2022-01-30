@@ -1,0 +1,281 @@
+.blog-banner {
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    padding-top: 8rem;
+}
+
+.blog-banner .blog-content {
+    position: absolute;
+    text-align: center;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    max-width: 50rem;
+}
+
+.blog-banner .blog-content h3 {
+    font-size: 4rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.blog-banner .blog-content p {
+    font-size: 1.7rem;
+    color: rgb(204, 204, 204);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.blog-banner .blog-vid-div {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog-banner .blog-vid-div .blog-vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+.blog-banner .btn {
+    border-radius: 5%;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    background: var(--white);
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    -webkit-transition: 0.2s linear;
+    transition: 0.2s linear;
+}
+
+.blog-banner .btn:hover {
+    color: var(--main-color);
+    background: rgb(214, 214, 214);
+}
+
+/* /////////////////////////// */
+.blog-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 1.5rem;
+    background: rgb(252, 252, 252);
+    margin: 10px;
+}
+
+.blog-container .blog-posts-container .blog-post {
+    width: 100%;
+    padding: 2rem;
+    background: rgb(245, 245, 245);
+    border: var(--border);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-container .blog-posts-container .blog-post .image {
+    height: 40rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.blog-container .blog-posts-container .blog-post .date {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.blog-container .blog-posts-container .blog-post .blog-title {
+    padding-top: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+
+.blog-container .blog-posts-container .blog-post .blog-text {
+    color: var(--light-color);
+    font-size: 1.6rem;
+    line-height: 1.7;
+    padding: 1rem 0;
+}
+
+.blog-container .blog-posts-container .blog-links {
+    border-top: var(--border);
+    margin-top: 0.5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.blog-container .blog-posts-container .blog-links .blog-user {
+    margin-right: auto;
+}
+
+.blog-container .blog-posts-container .blog-links .blog-icon {
+    padding-right: 1rem;
+}
+
+.blog-container .blog-posts-container .blog-links a {
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.blog-container .blog-posts-container .blog-links a i {
+    padding-right: 0.2rem;
+    color: var(--second-color);
+}
+
+.blog-container .blog-posts-container .blog-links a:hover {
+    color: var(--main-color);
+}
+
+.blog-container .blog-posts-container .blog-links a:hover i {
+    color: var(--main-color);
+}
+
+.blog-container .blog-sidebar .blog-box {
+    border: var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: rgb(245, 245, 245);
+    margin-bottom: 1.5rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-title {
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--main-color);
+    text-transform: capitalize;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-about {
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-about img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-about h3 {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-about p {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-about .blog-follow {
+    padding: 1rem 0;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-about .blog-follow a {
+    height: 4rem;
+    line-height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 1.7rem;
+    margin: 0 0.1rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-about .blog-follow a:hover {
+    background: var(--second-color);
+}
+
+.blog-container .blog-sidebar .blog-box .blog-category {
+    padding: 1rem 1.5rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-category a {
+    padding: 0.4rem 0;
+    font-size: 1.5rem;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-category a span {
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-category a:hover {
+    color: var(--second-color);
+}
+
+.blog-container .blog-sidebar .blog-box .blog-category a:hover span {
+    background-color: var(--second-color);
+}
+
+.blog-container .blog-sidebar .blog-box .blog-p-post {
+    padding: 1rem 2rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-p-post a {
+    padding: 1rem 0;
+    display: block;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-p-post a h3 {
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-p-post a span {
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-p-post a span i {
+    padding-right: 0.2rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-p-post a:hover h3 {
+    color: var(--second-color);
+}
+
+.blog-container .blog-sidebar .blog-box .blog-tags {
+    padding: 1rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-tags a {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    border-radius: 0.5rem;
+    border: var(--border);
+    margin: 0.5rem;
+}
+
+.blog-container .blog-sidebar .blog-box .blog-tags a:hover {
+    background: var(--second-color);
+    color: #fff;
+}
+/* /////////////////////////////////// */

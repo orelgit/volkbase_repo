@@ -851,6 +851,9 @@ textarea {
         display: block;
         margin: 2rem;
     }
+    .blog-container {
+        grid-template-columns: 2fr 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -909,10 +912,21 @@ textarea {
         width: 100%;
         padding: 0 1.5rem;
     }
+    .blog-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .blog-container .blog-posts-container .blog-post .image {
+        height: 30rem;
+    }
 }
 
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+    .blog-banner .blog-content {
+        margin: 10px;
     }
 }

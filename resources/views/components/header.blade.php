@@ -6,7 +6,7 @@
       <a href="#" class="logo"><img src="{{asset('images/logo2.png')}}" alt=""></a>
 
       <nav class="navbar">
-         <a href="#home">home</a>      
+         <a href="{{ URL::route('index-homePage') }}">home</a>      
          <a href="#service">services</a>
          <a href="#blog">blog</a>
          <a href="#contact">contact</a>

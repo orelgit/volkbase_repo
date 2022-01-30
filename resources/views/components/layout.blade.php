@@ -7,7 +7,9 @@
  <title>Home</title>
   {{-------> links <--------}}
   {{-- ///> css </// --}}
+   <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
  <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+
 
   {{-- ///> fontawsom icons </// --}}
   <link rel="stylesheet" href="{{ url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css')}}">

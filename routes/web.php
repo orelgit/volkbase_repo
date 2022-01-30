@@ -15,4 +15,7 @@ use App\Http\Controllers\HomeController;
 */
 
 // ------------>الانتقال الى الصفحة الرئيسية<------------
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('index-homePage');
+
+// ------------>الانتقال الى الصفحة البلوق<------------
+Route::get('blog', [HomeController::class, 'blog'])->name('blog-homePage');

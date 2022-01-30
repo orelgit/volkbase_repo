@@ -161,7 +161,7 @@
          <div class="banner-vid">
             <video autoplay muted loop src="{{asset('images/blog.mp4')}}"></video>
             <h2>BLOG</h2>
-         <a href="blog.html"><button class="btn-vid"> Check it Out</button></a>
+         <a href="{{ URL::route('blog-homePage') }}"><button class="btn-vid"> Check it Out</button></a>
          </div>
 
 
