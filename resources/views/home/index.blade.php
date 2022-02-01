@@ -13,7 +13,7 @@
          We do websites, web applications, mobile apps</h3>
 
 
-      <a class="a-btn" href="#">
+      <a class="a-btn" href="{{ URL::route('admin-homePage') }}">
          <span></span>
          <span></span>
          <span></span>

@@ -17,4 +17,10 @@ class HomeController extends Controller
     {
         return view('blog.home');
     }
+
+    // الانتقال الى صفحة الادمن فقط للتجريب حاليا
+    public function admin()
+    {
+        return view('admin.index');
+    }
 }

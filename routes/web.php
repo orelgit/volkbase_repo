@@ -19,3 +19,6 @@ Route::get('/', [HomeController::class, 'index'])->name('index-homePage');
 
 // ------------>الانتقال الى الصفحة البلوق<------------
 Route::get('blog', [HomeController::class, 'blog'])->name('blog-homePage');
+
+// ------------>الانتقال الى الصفحة الادمن فقط للتجريب حاليا<------------
+Route::get('admin', [HomeController::class, 'admin'])->name('admin-homePage');
