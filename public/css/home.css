@@ -243,6 +243,36 @@ html::-webkit-scrollbar-thumb {
     text-decoration: underline;
 }
 
+.header .lang-form {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 40rem;
+    background: var(--white);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+    -webkit-animation: fadeIn 0.2s linear;
+    animation: fadeIn 0.2s linear;
+    display: none;
+}
+
+.header .lang-form.active {
+    display: block;
+}
+
+.header .lang-form .changeLang {
+    width: 100%;
+    color: var(--main-color);
+    font-size: 1.8rem;
+}
+/* test */
+
+/* test */
+
 .btn {
     border-radius: 5%;
     display: inline-block;

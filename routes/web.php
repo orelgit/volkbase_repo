@@ -14,11 +14,16 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// ------------>الانتقال الى الصفحة الرئيسية<------------
-Route::get('/', [HomeController::class, 'index'])->name('index-homePage');
+route::redirect('/', '/en');
 
-// ------------>الانتقال الى الصفحة البلوق<------------
-Route::get('blog', [HomeController::class, 'blog'])->name('blog-homePage');
+Route::group(['prefix' => '{lang}'], function () {
 
-// ------------>الانتقال الى الصفحة الادمن فقط للتجريب حاليا<------------
-Route::get('admin', [HomeController::class, 'admin'])->name('admin-homePage');
+ // ------------>الانتقال الى الصفحة الرئيسية<------------
+ Route::get('/', [HomeController::class, 'index'])->name('index-homePage');
+
+ // ------------>الانتقال الى الصفحة البلوق<------------
+ Route::get('blog', [HomeController::class, 'blog'])->name('blog-homePage');
+
+ // ------------>الانتقال الى الصفحة الادمن فقط للتجريب حاليا<------------
+ Route::get('admin', [HomeController::class, 'admin'])->name('admin-homePage');
+});

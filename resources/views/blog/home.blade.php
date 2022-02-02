@@ -8,7 +8,7 @@
 <section class="blog-banner" id="blog-banner">
 
  <div class="blog-vid-div">
-  <video class="blog-vid" autoplay muted loop src="images/blog-page.mp4"></video>
+  <video class="blog-vid" autoplay muted loop src="{{asset('images/blog-page.mp4')}}"></video>
  </div>
 
  <div class="blog-content">
@@ -30,7 +30,7 @@
  <div class="blog-posts-container">
 
   <div class="blog-post">
-   <img src="images/blog4.jpg" alt="" class="image">
+   <img src="{{asset('images/blog4.jpg')}}" alt="" class="image">
    <div class="blog-date">
     <i class="far fa-clock"></i>
     <span>1st may, 2021</span>
@@ -60,7 +60,7 @@
   </div>
 
   <div class="blog-post">
-   <img src="images/blog5.jpg" alt="" class="image">
+   <img src="{{asset('images/blog5.jpg')}}" alt="" class="image">
    <div class="blog-date">
     <i class="far fa-clock"></i>
     <span>1st may, 2021</span>
@@ -90,7 +90,7 @@
   </div>
 
   <div class="blog-post">
-   <img src="images/blog6.jpg" alt="" class="image">
+   <img src="{{asset('images/blog6.jpg')}}" alt="" class="image">
    <div class="blog-date">
     <i class="far fa-clock"></i>
     <span>1st may, 2021</span>
@@ -126,7 +126,7 @@
   <div class="blog-box">
    <h3 class="blog-title">about this page</h3>
    <div class="blog-about">
-    <img src="images/undraw_contract_re_ves9.svg" alt="">
+    <img src="{{asset('images/undraw_contract_re_ves9.svg')}}" alt="">
     <h3>Blog</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, officia.</p>
     <div class="blog-follow">
