@@ -12,9 +12,9 @@
  </div>
 
  <div class="blog-content">
-  <h3>explore the technology</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, laboriosam?</p>
-  <a href="#posts" class="btn">Go to blogs</a>
+  <h3>{{__('tran.BOGHE title text')}}</h3>
+  <p>{{__('tran.BOGHE disc text')}}</p>
+  <a href="#posts" class="btn">{{__('tran.BG btn')}}</a>
  </div>
 
 </section>
@@ -35,18 +35,13 @@
     <i class="far fa-clock"></i>
     <span>1st may, 2021</span>
    </div>
-   <h3 class="blog-title">blog title goes here</h3>
-   <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestias rerum numquam, quos aut est
-    culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam corporis cum doloremque quasi
-    fugiat exercitationem aliquid cupiditate pariatur. Dolor laboriosam voluptatem ex praesentium magni error debitis
-    maxime alias autem distinctio. Fuga, esse velit!</p>
-   <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, reiciendis fugiat quas nemo quia
-    omnis repellat obcaecati quaerat voluptates fuga error dicta cupiditate pariatur soluta dolorum quis eum quibusdam
-    quam?</p>
+   <h3 class="blog-title">{{__('tran.BOGMINE mpost1 title')}}</h3>
+   <p class="blog-text">{{__('tran.BOGMINE mpost1 disc')}}</p>
+   <p class="blog-text">{{__('tran.BOGMINE mpost1 disc')}}</p>
    <div class="blog-links">
     <a href="#" class="blog-user">
      <i class="far fa-user"></i>
-     <span>by admin</span>
+     <span>{{__('tran.BOGMINE mpost1 by')}}</span>
     </a>
     <a href="#" class="blog-icon">
      <i class="far fa-comment"></i>
@@ -65,18 +60,13 @@
     <i class="far fa-clock"></i>
     <span>1st may, 2021</span>
    </div>
-   <h3 class="blog-title">blog title goes here</h3>
-   <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestias rerum numquam, quos aut est
-    culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam corporis cum doloremque quasi
-    fugiat exercitationem aliquid cupiditate pariatur. Dolor laboriosam voluptatem ex praesentium magni error debitis
-    maxime alias autem distinctio. Fuga, esse velit!</p>
-   <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, reiciendis fugiat quas nemo quia
-    omnis repellat obcaecati quaerat voluptates fuga error dicta cupiditate pariatur soluta dolorum quis eum quibusdam
-    quam?</p>
+   <h3 class="blog-title">{{__('tran.BOGMINE mpost2 title')}}</h3>
+   <p class="blog-text">{{__('tran.BOGMINE mpost2 disc')}}</p>
+    <p class="blog-text">{{__('tran.BOGMINE mpost2 disc')}}</p>
    <div class="blog-links">
-    <a href="#" class="user">
+    <a href="#" class="blog-user">
      <i class="far fa-user"></i>
-     <span>by admin</span>
+     <span>{{__('tran.BOGMINE mpost2 by')}}</span>
     </a>
     <a href="#" class="blog-icon">
      <i class="far fa-comment"></i>
@@ -95,18 +85,13 @@
     <i class="far fa-clock"></i>
     <span>1st may, 2021</span>
    </div>
-   <h3 class="blog-title">blog title goes here</h3>
-   <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum molestias rerum numquam, quos aut est
-    culpa quisquam excepturi sed a inventore dicta tempore consequuntur possimus magnam corporis cum doloremque quasi
-    fugiat exercitationem aliquid cupiditate pariatur. Dolor laboriosam voluptatem ex praesentium magni error debitis
-    maxime alias autem distinctio. Fuga, esse velit!</p>
-   <p class="blog-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, reiciendis fugiat quas nemo quia
-    omnis repellat obcaecati quaerat voluptates fuga error dicta cupiditate pariatur soluta dolorum quis eum quibusdam
-    quam?</p>
+   <h3 class="blog-title">{{__('tran.BOGMINE mpost3 title')}}</h3>
+   <p class="blog-text">{{__('tran.BOGMINE mpost3 disc')}}</p>
+   <p class="blog-text">{{__('tran.BOGMINE mpost3 disc')}}</p>
    <div class="blog-links">
     <a href="#" class="blog-user">
      <i class="far fa-user"></i>
-     <span>by admin</span>
+     <span>{{__('tran.BOGMINE mpost3 by')}}</span>
     </a>
     <a href="#" class="blog-icon">
      <i class="far fa-comment"></i>
@@ -124,11 +109,11 @@
  <div class="blog-sidebar">
 
   <div class="blog-box">
-   <h3 class="blog-title">about this page</h3>
+   <h3 class="blog-title">{{__('tran.BOGAT head title')}}</h3>
    <div class="blog-about">
     <img src="{{asset('images/undraw_contract_re_ves9.svg')}}" alt="">
-    <h3>Blog</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, officia.</p>
+    <h3>{{__('tran.BOGAT title')}}</h3>
+    <p>{{__('tran.BOGAT disc')}}</p>
     <div class="blog-follow">
      <a href="#" class="fab fa-facebook-f"></a>
      <a href="#" class="fab fa-twitter"></a>
@@ -139,51 +124,51 @@
   </div>
 
   <div class="blog-box">
-   <h3 class="blog-title">categories</h3>
+   <h3 class="blog-title">{{__('tran.BOGCAT head title')}}</h3>
    <div class="blog-category">
-    <a href="#"> programming <span>42</span></a>
-    <a href="#"> photography <span>75</span> </a>
-    <a href="#"> technology <span>22</span> </a>
-    <a href="#"> study <span>48</span> </a>
-    <a href="#"> science <span>39</span> </a>
-    <a href="#"> public <span>12</span> </a>
-    <a href="#"> business <span>32</span> </a>
+    <a href="#"> {{__('tran.BOGCAT title1')}} <span>42</span></a>
+    <a href="#"> {{__('tran.BOGCAT title2')}} <span>75</span> </a>
+    <a href="#"> {{__('tran.BOGCAT title3')}} <span>22</span> </a>
+    <a href="#"> {{__('tran.BOGCAT title4')}} <span>48</span> </a>
+    <a href="#"> {{__('tran.BOGCAT title5')}} <span>39</span> </a>
+    <a href="#"> {{__('tran.BOGCAT title6')}} <span>12</span> </a>
+    <a href="#"> {{__('tran.BOGCAT title7')}} <span>32</span> </a>
     
    </div>
   </div>
 
   <div class="blog-box">
-   <h3 class="blog-title">popular posts</h3>
+   <h3 class="blog-title">{{__('tran.BOGPR head title')}}</h3>
    <div class="blog-p-post">
     <a href="#">
-     <h3>01. blog title goes here</h3>
+     <h3>{{__('tran.BOGPR ppost1')}}</h3>
      <span><i class="far fa-clock"></i>1st may, 2021</span>
     </a>
     <a href="#">
-     <h3>02. blog title goes here</h3>
+     <h3>{{__('tran.BOGPR ppost2')}}</h3>
      <span><i class="far fa-clock"></i>1st may, 2021</span>
     </a>
     <a href="#">
-     <h3>03. blog title goes here</h3>
+     <h3>{{__('tran.BOGPR ppost3')}}</h3>
      <span><i class="far fa-clock"></i>1st may, 2021</span>
     </a>
     <a href="#">
-     <h3>04. blog title goes here</h3>
+     <h3>{{__('tran.BOGPR ppost4')}}</h3>
      <span><i class="far fa-clock"></i>1st may, 2021</span>
     </a>
    </div>
   </div>
 
   <div class="blog-box">
-   <h3 class="blog-title">popular tags</h3>
+   <h3 class="blog-title">{{__('tran.BOGT head title')}}</h3>
    <div class="blog-tags">
-    <a href="#">Phone</a>
-    <a href="#">photo</a>
-    <a href="#">science</a>
-    <a href="#">IT</a>
-    <a href="#">Database</a>
-    <a href="#">Games</a>
-    <a href="#">world</a>
+    <a href="#">{{__('tran.BOGT ptag1')}}</a>
+    <a href="#">{{__('tran.BOGT ptag2')}}</a>
+    <a href="#">{{__('tran.BOGT ptag3')}}</a>
+    <a href="#">{{__('tran.BOGT ptag4')}}</a>
+    <a href="#">{{__('tran.BOGT ptag5')}}</a>
+    <a href="#">{{__('tran.BOGT ptag6')}}</a>
+    <a href="#">{{__('tran.BOGT ptag7')}}</a>
    </div>
   </div>
 

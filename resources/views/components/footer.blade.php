@@ -9,7 +9,7 @@
       <div class="box">
             <img src="{{asset('images/logo2.png')}}" alt="">
 
-         <p>{{__('Our Vision To be number one leader company in the industry of IT Services in Yemen and also to be recognized internationally')}}</p>
+         <p>{{__('tran.FR head title')}}</p>
          <div class="share">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-twitter"></a>
@@ -19,29 +19,29 @@
       </div>
 
       <div class="box">
-         <h3>{{__('quick links')}}</h3>
-         <a href="#home" class="link">{{__('home')}}</a>
-         <a href="#service" class="link">{{__('services')}}</a>
-         <a href="#blog" class="link">{{__('blog')}}</a>
-         <a href="#contact" class="link">{{__('contact')}}</a>
-         <a href="#about" class="link">{{__('about')}}</a>
+         <h3>{{__('tran.FR quick title')}}</h3>
+         <a href="#home" class="link">{{__('tran.home')}}</a>
+         <a href="#service" class="link">{{__('tran.services')}}</a>
+         <a href="#blog" class="link">{{__('tran.blog')}}</a>
+         <a href="#contact" class="link">{{__('tran.contact')}}</a>
+         <a href="#about" class="link">{{__('tran.about')}}</a>
         
       </div>
 
       <div class="box">
-         <h3>{{__('useful links')}}</h3>
-         <a href="#" class="link">{{__('help center')}}</a>
-         <a href="#" class="link">{{__('ask questions')}}</a>
-         <a href="#" class="link">{{__('send feedback')}}</a>
-         <a href="#" class="link">{{__('private policy')}}</a>
-         <a href="#" class="link">{{__('terms of use')}}</a>
+         <h3>{{__('tran.FR useful title')}}</h3>
+         <a href="#" class="link">{{__('tran.FR questions')}}</a>
+         <a href="#" class="link">{{__('tran.FR feedback')}}</a>
+         <a href="#" class="link">{{__('tran.FR help')}}</a>
+         <a href="#" class="link">{{__('tran.FR policy')}}</a>
+         <a href="#" class="link">{{__('tran.FR terms')}}</a>
       </div>
 
 
 
    </div>
 
-   <div class="credit"> {{__('created by')}} <span>{{__('N4DA')}}</span> | {{__('all rights reserved!')}} </div>
+   <div class="credit"> {{__('tran.FR created')}} <span>{{__('tran.FR company')}}</span> | {{__('tran.FR rights')}} </div>
 
 </section>
 @endsection
