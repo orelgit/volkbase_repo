@@ -11,6 +11,7 @@
          <a href="#blog">{{__('tran.blog')}}</a>
          <a href="#contact">{{__('tran.contact')}}</a>
          <a href="#about">{{__('tran.about')}}</a>
+         
       </nav>
 
       <div class="icons">
@@ -50,9 +51,10 @@
                     <option value="{{route(Route::currentRouteName(),'en')}}" >{{__('tran.HR en')}}</option>
                     <option value="{{route(Route::currentRouteName(),'ar')}}" >{{__('tran.HR ar')}}</option>
                 </select>
+             
                 
             </div>
    </header>
-   
+    
 
 @endsection

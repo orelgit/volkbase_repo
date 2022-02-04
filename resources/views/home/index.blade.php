@@ -33,7 +33,6 @@
 
    <!-- home section ends -->
 
-   
    <!-- services -->
    <section id="service" class="service">
 
@@ -44,7 +43,7 @@
          <div class="image">
             <img src="{{asset('images/74.svg')}}" alt="">
          </div>
-         <div class="content">
+         <div class="content" style="{{ app()->getLocale() == 'ar'? 'text-align: right' : 'text-align: left' }}">
             <h3>{{__('tran.SE title web')}}</h3>
             <p>{{__('tran.SE disc web')}}</p>
             <a href="#"><button class="btn">{{__('tran.btn')}}</button></a>
@@ -54,7 +53,7 @@
 
       <div class="row">
 
-         <div class="content">
+         <div class="content" style="{{ app()->getLocale() == 'ar'? 'text-align: right' : 'text-align: left' }}">
             <h3>{{__('tran.SE title mob')}}</h3>
             <p>{{__('tran.SE disc mob')}}</p>
             <a href="#"><button class="btn">{{__('tran.btn')}}</button></a>
@@ -71,7 +70,7 @@
          <div class="image">
             <img src="{{asset('images/282.svg')}}" alt="">
          </div>
-         <div class="content">
+         <div class="content" style="{{ app()->getLocale() == 'ar'? 'text-align: right' : 'text-align: left' }}">
             <h3>{{__('tran.SE title net')}}</h3>
             <p>{{__('tran.SE disc net')}}</p>
             <a href="#"><button class="btn">{{__('tran.btn')}}</button></a>
@@ -81,7 +80,7 @@
 
       <div class="row">
 
-         <div class="content">
+         <div class="content" style="{{ app()->getLocale() == 'ar'? 'text-align: right' : 'text-align: left' }}">
             <h3>{{__('tran.SE title data')}}</h3>
             <p>{{__('tran.SE disc data')}}</p>
             <a href="#"><button class="btn">{{__('tran.btn')}}</button></a>
@@ -159,7 +158,7 @@
 
    <!-- contact section starts  -->
    
-   <section id="contact" class="contact">
+   <section id="contact"  class="contact">
    
       <h1 class="heading">{{__('tran.CT head title')}}</h1>
    
@@ -170,7 +169,7 @@
             <img src="{{asset('images/undraw_team_spirit_re_yl1v (1).svg')}}" alt="">
          </div>
    
-         <div class="form-container">
+         <div style="{{ app()->getLocale() == 'ar'? 'text-align: right' : 'text-align: left' }}" class="form-container">
             <form action="">
    
                <div class="inputBox">
@@ -201,10 +200,10 @@
 
       <div class="row">
 
-         <div class="content">
+         <div class="content" style="{{ app()->getLocale() == 'ar'? 'text-align: right' : 'text-align: left' }}">
             <h3>{{__('tran.AT title')}}</h3>
             <p>{{__('tran.AT disc')}}</p>
-            <a href="#"><button class="btn">{{__('tran.btn')}}</button></a>
+            <a href="#"><button  class="btn">{{__('tran.btn')}}</button></a>
          </div>
 
          <div class="image">

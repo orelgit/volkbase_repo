@@ -47,5 +47,4 @@ window.onscroll = () =>{
         location.href=document.getElementById("selectbox").value;
     }    
 
-//     function myFunction() {
-//   document.getElementById("demo").style.direction = "rtl";}
+

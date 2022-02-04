@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Graduate&family=Ubuntu:wght@300;400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Graduate&family=Mada&family=Ubuntu&display=swap");
 :root {
     --main-color: #5379f6;
     --second-color: #4364db;
@@ -17,7 +16,7 @@ body {
 
 * {
     /* // font-family: 'Graduate', cursive; */
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Ubuntu", "Cairo";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -309,7 +308,7 @@ html::-webkit-scrollbar-thumb {
 
 .home .banner {
     color: var(--white);
-    font-family: "Graduate", cursive;
+    font-family: "Graduate", "Cairo";
     font-size: 5rem;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
 }
@@ -323,7 +322,7 @@ html::-webkit-scrollbar-thumb {
 
 /* ,,,, */
 .home .a-btn {
-    font-family: "Graduate", cursive;
+    font-family: "Graduate", "Cairo";
     position: relative;
     display: inline-block;
     margin-top: 30px;
@@ -444,7 +443,7 @@ html::-webkit-scrollbar-thumb {
     color: var(--main-color);
     position: relative;
     letter-spacing: 0.2rem;
-    font-family: "Graduate", cursive;
+    font-family: "Graduate", "Cairo";
 }
 
 /* Heading end */
@@ -658,7 +657,7 @@ html::-webkit-scrollbar-thumb {
 }
 .blog .banner-vid h2 {
     position: absolute;
-    font-family: "Graduate", cursive;
+    font-family: "Graduate", "Cairo";
     top: 0;
     left: 0;
     width: 100%;

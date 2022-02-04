@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  >
+<html  lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() == 'ar'? 'rtl' : 'ltr' }}">
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,7 @@
   {{-- ///> fontawsom icons </// --}}
   <link rel="stylesheet" href="{{ url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css')}}">
 
+  
 </head>
 <body>
   {{-------> Header <--------}}

@@ -128,8 +128,8 @@ return [
  'BOGMINE mpost2 disc' => 'Microsoft founder Bill Gates says: (The Internet has become the public arena of the global village) The Internet is defined as a global network made up of a group of computers that are connected to each other to transfer information and send it from one computer to another, and the Internet was used for the first time in 1969 by the agency United States government advanced research projects; Later, the University of California and the Stanford Institute for Internet-related Research carried out a series of studies and research on sending and forwarding messages before this system became an important part of the computer science infrastructure in the United States, followed by its expansion and spread around the world in a way that allows individuals to use it easily and easily.',
  'BOGMINE mpost2 by' => 'Bill Gates ',
 
- 'BOGMINE mpost3 title' => "first mobile ',
- 'BOGMINE mpost3 disc' => 'The first mobile phone in the world is due to the history of 1973, where it was manufactured by Martin Cooper Finder at Motorola Telecom in Chicago, United States. Since then, technical developments in the industry have begun to take mobile phones until they are currently in manufacturing piercing phones and a mobile phone invention date to Lucent Technologies is currently in New Jersey, and although it is the first company The mobile phone is invented and tested to Martin Cooper, a Motorola's researcher in 1973",
+ 'BOGMINE mpost3 title' => 'first mobile',
+ 'BOGMINE mpost3 disc' => "The first mobile phone in the world is due to the history of 1973, where it was manufactured by Martin Cooper Finder at Motorola Telecom in Chicago, United States. Since then, technical developments in the industry have begun to take mobile phones until they are currently in manufacturing piercing phones and a mobile phone invention date to Lucent Technologies is currently in New Jersey, and although it is the first company The mobile phone is invented and tested to Martin Cooper, a Motorola's researcher in 1973",
  'BOGMINE mpost3 by' => 'Martin Cooper',
 
 ];
