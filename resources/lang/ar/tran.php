@@ -12,6 +12,9 @@ return [
  // -----> header Section <-----
  // login form
  'HR login' => 'سجل دخولك',
+ 'HR name' => 'ادخل الاسم',
+ 'HR photo' => 'ارفق صورة',
+ 'HR number' => 'ادخل رقم الهاتف',
  'HR email' => 'ادخل بريدك الالكتروني',
  'HR password' => 'ادخل كلمة المرور',
  'HR remember' => 'تذكر معلوماتي',
@@ -19,6 +22,8 @@ return [
  'HR account' => "ليس لديك حساب؟",
  'HR create' => 'اصنع حسابك ',
  'HR enter' => 'دخول',
+ // regester form
+ 'HR reg' => 'سجل حسابك',
  // search
  'HR search' => 'ابحث هنا',
  // lang

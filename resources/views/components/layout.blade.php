@@ -9,6 +9,7 @@
   {{-- ///> css </// --}}
    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
  <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/login.css') }}">
  
 
 

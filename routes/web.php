@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +26,6 @@ Route::group(['prefix' => '{lang}'], function () {
 
  // ------------>الانتقال الى الصفحة الادمن فقط للتجريب حاليا<------------
  Route::get('admin', [HomeController::class, 'admin'])->name('admin-homePage');
+
+ Route::get('register', [RegisterController::class, 'create'])->name('register-page');
 });

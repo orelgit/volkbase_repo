@@ -93,7 +93,8 @@ html::-webkit-scrollbar-thumb {
 .header .navbar a:hover {
     color: var(--second-color);
 }
-.header .icons div {
+.header .icons div,
+.aicon {
     height: 4rem;
     width: 4rem;
     line-height: 5rem;
