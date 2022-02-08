@@ -16,12 +16,12 @@ return [
  'HR name' => 'enter your name',
  'HR photo' => 'Photo',
  'HR number' => 'enter your phone number',
-
  'HR email' => 'enter your email',
  'HR password' => 'enter your password',
  'HR remember' => 'remember me',
  'HR forgot' => 'forgot password?',
- 'HR account' => "don't have an account",
+ 'HR account' => "don't have an account ?",
+ 'HR already' => "Already have an account ?",
  'HR create' => 'create one!',
  'HR enter' => 'enter',
  // regester form

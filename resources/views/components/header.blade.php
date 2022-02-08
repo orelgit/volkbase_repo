@@ -17,7 +17,7 @@
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
          <div id="search-btn" class="fas fa-search"></div>
-         <a href="{{ URL::route('register-page',app()->getLocale()) }}" id="login-btn" class="fas fa-user aicon"></a>
+         <a href="{{ URL::route('login-page',app()->getLocale()) }}" id="login-btn" class="fas fa-user aicon"></a>
          <div id="lang-btn" class="fas fa-language"></div>
       </div>
     

@@ -20,6 +20,7 @@ return [
  'HR remember' => 'تذكر معلوماتي',
  'HR forgot' => 'نسيت كلمة المرور؟',
  'HR account' => "ليس لديك حساب؟",
+ 'HR already' => "هل لديك حساب بالفعل؟",
  'HR create' => 'اصنع حسابك ',
  'HR enter' => 'دخول',
  // regester form
