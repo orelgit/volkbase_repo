@@ -26,9 +26,8 @@ class RegisterController extends Controller
             'sure_pass' => 'required|confirmed',
         ]);
 
-
         auth()->login(User::create($attributes));
 
-        dd('success', 'Your account has been created.');
+        return redirect('/')->with('success', 'Your account has been created.');
     }
 }

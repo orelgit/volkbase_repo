@@ -33,7 +33,7 @@ Route::group(['prefix' => '{lang}'], function () {
  Route::get('register', [RegisterController::class, 'create'])->name('register-page');
  Route::post('register', [RegisterController::class, 'store'])->name('register-page');
 
- // ------------>الانتقال الى الصفحة تسجيل حساب جديد<------------
+ // ------------>الانتقال الى صفحة تسجيل الدخول<------------
  Route::get('login', [SessionsController::class, 'create'])->name('login-page');
  Route::post('login', [SessionsController::class, 'store'])->name('login-page');
  Route::get('logout', [SessionsController::class, 'destroy'])->name('logout-page');
