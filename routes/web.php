@@ -19,10 +19,8 @@ use App\Models\User;
 route::redirect('/', '/en');
 
 Route::group(['prefix' => '{lang}'], function () {
-
  // ------------>الانتقال الى الصفحة الرئيسية<------------
  Route::get('/', [HomeController::class, 'index'])->name('index-homePage');
-
  // ------------>الانتقال الى الصفحة البلوق<------------
  Route::get('blog', [HomeController::class, 'blog'])->name('blog-homePage');
 
