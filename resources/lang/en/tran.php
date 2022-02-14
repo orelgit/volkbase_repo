@@ -24,6 +24,31 @@ return [
  'HR already' => "Already have an account ?",
  'HR create' => 'create one!',
  'HR enter' => 'enter',
+ // validation
+ // name
+ 'name required' => 'please enter your name ',
+ 'name min' => 'Your name must consist of three letters',
+ 'name max' => 'Your name must consist less than thirty letters',
+
+ // mobile
+ 'mobile required' => 'please enter your phone number',
+ 'mobile min' => 'Your number must consist of 9 numbers ',
+ 'mobile max' => 'Your number must consist of 9 numbers ',
+ 'mobile numeric' => 'This field must contain numbers only',
+ // email
+ 'email required' => 'please enter your email ',
+ 'email Field' => 'this Field must be an email ',
+ 'email min' => 'Your email must consist of ten letters',
+ 'email max' => 'Your email must consist less than 250 letters',
+ 'email unique' => 'This Email Has Already Been Taken.',
+ 'email exists' => 'this email is not correct',
+ // password
+ 'password required' => 'please enter your password',
+ 'password min' => 'Your password must consist of 7 letters',
+ 'password max' => 'Your password must consist less than 250 letters',
+ 'password wrong' => 'your password is not correct',
+
+
  // regester form
  'HR reg' => 'Register',
  // search
@@ -88,6 +113,10 @@ return [
  'FR company' => 'N4DA',
  'FR rights' => 'all rights reserved!',
 
+
+ // welcome and good bey messages
+ 'success' => 'Your account has been created.',
+ 'welcom Back' => 'Welcome Back!',
 
  //==============> blog page content <===============
 

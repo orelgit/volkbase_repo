@@ -23,6 +23,7 @@ body {
     outline: none;
     border: none;
     text-decoration: none;
+    /* text-transform: capitalize; */
     transition: all 0.2s linear;
 }
 
@@ -93,6 +94,9 @@ html::-webkit-scrollbar-thumb {
 .header .navbar a:hover {
     color: var(--second-color);
 }
+.header .icons {
+    display: flex;
+}
 .header .icons div,
 .aicon {
     height: 4rem;
@@ -103,8 +107,8 @@ html::-webkit-scrollbar-thumb {
     cursor: pointer;
     text-align: center;
     margin-left: 0.3rem;
+    background: none;
 }
-
 .header .icons div:hover {
     color: var(--second-color);
 }
@@ -845,6 +849,36 @@ textarea {
 .footer .credit span {
     color: var(--main-color);
 }
+
+/* flash */
+.flash {
+    /* fixed bg-blue-500 text-white py-2 px-4 rounded-xl bottom-3 right-3 text-sm */
+    position: fixed;
+    background: var(--white);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 2%;
+    font-size: 2rem;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    bottom: 10px;
+    right: 5px;
+    font-family: "Graduate", "Cairo";
+}
+/* flash end */
+
+/*error  */
+.error-msg {
+    text-align: right;
+    color: red;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+/*error end  */
 
 /* media queries */
 

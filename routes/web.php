@@ -28,11 +28,11 @@ Route::group(['prefix' => '{lang}'], function () {
  Route::get('admin', [HomeController::class, 'admin'])->name('admin-homePage');
 
  // ------------>الانتقال الى الصفحة تسجيل حساب جديد<------------
- Route::get('register', [RegisterController::class, 'create'])->name('register-page');
- Route::post('register', [RegisterController::class, 'store'])->name('register-page');
+ Route::get('register', [RegisterController::class, 'create'])->name('register-page')->middleware('guest');
+ Route::post('register', [RegisterController::class, 'store'])->name('register-page')->middleware('guest');
 
  // ------------>الانتقال الى صفحة تسجيل الدخول<------------
- Route::get('login', [SessionsController::class, 'create'])->name('login-page');
- Route::post('login', [SessionsController::class, 'store'])->name('login-page');
- Route::get('logout', [SessionsController::class, 'destroy'])->name('logout-page');
+ Route::get('login', [SessionsController::class, 'create'])->name('login-page')->middleware('guest');
+ Route::post('login', [SessionsController::class, 'store'])->name('login-page')->middleware('guest');
+ Route::post('logout', [SessionsController::class, 'destroy'])->name('logout-page')->middleware('auth');
 });

@@ -12,6 +12,7 @@
         <span></span>
         {{__('tran.btn')}}
     </a>
+
     <div class="fas fa-cog nut1"></div>
     <div class="fas fa-cog nut2"></div>
 </section>

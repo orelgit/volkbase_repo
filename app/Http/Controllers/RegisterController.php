@@ -14,63 +14,58 @@ class RegisterController extends Controller
         return view('register.create');
     }
 
-    public function rules(){
+    public function rules()
+    {
         return [
             'u_name' => 'required|min:3|max:30',
             'u_mobile' => 'required|min:9|numeric',
             'u_email' => 'required|email|max:255|unique:users,u_email',
             //'u_photo' => 'image',
-            'u_pass' => 'required|min:7|max:255'
+            'password' => 'required|min:7|max:255'
         ];
     }
-    public function msgs(){
+    public function msgs()
+    {
         return [
-            'u_name.required'=>'الحقل مطلوب',
-            'u_name.max'=>'لا يمكنك إدخال اكثر من 30 حرف',
-            'u_name.min'=>'لا يمكنك إدخال اقل من 3 أحرف',
-            'u_mobile.required'=>'الحقل مطلوب',
-            'u_mobile.max'=>'لا يمكنك إدخال اكثر من 9 حرف',
-            'u_mobile.min'=>'لا يمكنك إدخال اقل من 9 أحرف',
-            'u_email.required'=>'الحقل مطلوب',
-            'u_email.max'=>'لا يمكنك إدخال اكثر من 255 حرف',
-            'u_email.min'=>'لا يمكنك إدخال اقل من 10 أحرف',
-            'u_pass.required'=>'الحقل مطلوب',
-            'u_pass.max'=>'لا يمكنك إدخال اكثر من 255 حرف',
-            'u_pass.min'=>'لا يمكنك إدخال اقل من 7 أحرف'
+            'u_name.required' => __("tran.name required"),
+            'u_name.max' => __("tran.name max"),
+            'u_name.min' => __("tran.name min"),
+            'u_mobile.required' => __("tran.moblie required"),
+            'u_mobile.max' => __("tran.mobile max"),
+            'u_mobile.min' => __("tran.mobile min"),
+            'u_mobile.numeric' => __("tran.mobile numeric"),
+            'u_email.required' => __("tran.email required"),
+            'u_email.max' => __("tran.email max"),
+            'u_email.min' => __("tran.email min"),
+            'u_email.email' => __("tran.email Field"),
+            'u_email.unique' => __("tran.email unique"),
+            'password.required' => __("tran.password required"),
+            'password.max' => __("tran.password max"),
+            'password.min' => __("tran.password min")
         ];
     }
 
     public function store(Request $request)
     {
-        // return request()->all();
-        // var_dump(request()->all);
-
-        // $attributes = request()->validate([
-        //     'u_name' => 'required|min:3|max:255|unique:users,u_name',
-        //     'u_mobile' => 'required|min:9|max:10|numeric',
-        //     'u_email' => 'required|email|max:255|unique:users,u_email',
-        //     'u_photo' => 'image',
-        //     'u_pass' => 'required|min:7|max:255|current_password',
-        //     'sure_pass' => 'required|confirmed',
-        // ]);
-
-        //auth()->login(User::create($attributes));
-
-        $valid = Validator::make($request->all(),$this->rules(),$this->msgs());
-        if($valid->fails()){
+        $valid = Validator::make($request->all(), $this->rules(), $this->msgs());
+        if ($valid->fails()) {
             // return 'Error';
             return back()->withErrors($valid)->withInput($request->all());
-        }else{
-            User::create([
+        } else {
+            $user = ([
                 'u_name' => $request->u_name,
                 'u_mobile' => $request->u_mobile,
-                'u_pass' => Hash::make($request->u_pass),
+                'password' => $request->password,
                 'u_photo' => $request->u_photo,
                 'u_email' => $request->u_email,
                 'ut_id' => 1,
             ]);
+            // log in 
+            auth()->login(User::create($user));
         }
 
-        return back()->with('success', 'Your account has been created.');
+
+
+        return redirect(route('index-homePage', app()->getLocale()))->with('success', __("tran.success"));
     }
 }

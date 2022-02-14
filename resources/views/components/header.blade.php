@@ -17,8 +17,21 @@
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
          <div id="search-btn" class="fas fa-search"></div>
-         <a href="{{ URL::route('login-page',app()->getLocale()) }}" id="login-btn" class="fas fa-user aicon"></a>
          <div id="lang-btn" class="fas fa-language"></div>
+         @auth
+          <form class="aicon" action="{{ URL::route('logout-page',app()->getLocale()) }}" method="POST">
+               @csrf
+                      <button class="fas fa-sign-out aicon" type="submit"></button>
+
+         </form>
+            <span class="aicon">{{auth()->user()->u_name}}</span>
+             @else
+           <div> <a href="{{ URL::route('login-page',app()->getLocale()) }}" id="login-btn" class="fas fa-user aicon"></a></div>
+              
+               
+         @endauth
+         
+
       </div>
     
        
