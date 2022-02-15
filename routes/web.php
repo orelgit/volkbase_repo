@@ -23,10 +23,6 @@ Route::group(['prefix' => '{lang}'], function () {
  Route::get('/', [HomeController::class, 'index'])->name('index-homePage');
  // ------------>الانتقال الى الصفحة البلوق<------------
  Route::get('blog', [HomeController::class, 'blog'])->name('blog-homePage');
-
- // ------------>الانتقال الى الصفحة الادمن فقط للتجريب حاليا<------------
- Route::get('admin', [HomeController::class, 'admin'])->name('admin-homePage');
-
  // ------------>الانتقال الى الصفحة تسجيل حساب جديد<------------
  Route::get('register', [RegisterController::class, 'create'])->name('register-page')->middleware('guest');
  Route::post('register', [RegisterController::class, 'store'])->name('register-page')->middleware('guest');
@@ -35,4 +31,9 @@ Route::group(['prefix' => '{lang}'], function () {
  Route::get('login', [SessionsController::class, 'create'])->name('login-page')->middleware('guest');
  Route::post('login', [SessionsController::class, 'store'])->name('login-page')->middleware('guest');
  Route::post('logout', [SessionsController::class, 'destroy'])->name('logout-page')->middleware('auth');
+
+ // ------------>الانتقال الى الصفحة الادمن وكامل الصلاحيات <------------
+ Route::middleware('admin')->group(function () {
+  Route::get('admin', [HomeController::class, 'admin'])->name('admin-homePage');
+ });
 });

@@ -18,20 +18,28 @@
          <div id="menu-btn" class="fas fa-bars"></div>
          <div id="search-btn" class="fas fa-search"></div>
          <div id="lang-btn" class="fas fa-language"></div>
+         @admin
+                {{-- إظهار زر الادمن فقط للادمن --}}
+       <a href="{{ URL::route('admin-homePage',app()->getLocale()) }}"><div class="fas fa-user-shield"></div></a>  
+         @endadmin
+      
+
          @auth
+         {{-- إظهار اسم المستخدم وزر الخروج اذا كان مسجل دخوله --}}
+         
           <form class="aicon" action="{{ URL::route('logout-page',app()->getLocale()) }}" method="POST">
                @csrf
                       <button class="fas fa-sign-out aicon" type="submit"></button>
-
          </form>
-            <span class="aicon">{{auth()->user()->u_name}}</span>
+            <div class="aicon">{{auth()->user()->u_name}}</div>
+            
+
+            {{-- إظهار تسجيل الدخول وتسجيل حساب اذا كان مش مسجل --}}
              @else
            <div> <a href="{{ URL::route('login-page',app()->getLocale()) }}" id="login-btn" class="fas fa-user aicon"></a></div>
-              
-               
+
          @endauth
          
-
       </div>
     
        

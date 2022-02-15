@@ -5,7 +5,7 @@
 <section id="home" class="home">
     <h1 class="banner">{{__('tran.HE title text')}}</h1>
     <h3 class="slogan">{{__('tran.HE disc text')}}</h3>
-    <a class="a-btn" href="{{ URL::route('admin-homePage',app()->getLocale()) }}">
+    <a class="a-btn" href="#">
         <span></span>
         <span></span>
         <span></span>
