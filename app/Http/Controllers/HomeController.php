@@ -17,10 +17,4 @@ class HomeController extends Controller
     {
         return view('blog.home');
     }
-
-    // يسمح بدخول الادمن فقط
-    public function admin()
-    {
-        return view('admin.index');
-    }
 }

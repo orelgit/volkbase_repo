@@ -23,6 +23,9 @@ return [
  'HR already' => "هل لديك حساب بالفعل؟",
  'HR create' => 'اصنع حسابك ',
  'HR enter' => 'دخول',
+ 'HR logout' => 'تسجيل الخروج',
+ 'HR profile' => 'الملف الشخصي',
+
  // validation
  // name
  'name required' => 'يرجى ادخال الاسم',

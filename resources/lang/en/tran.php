@@ -24,6 +24,8 @@ return [
  'HR already' => "Already have an account ?",
  'HR create' => 'create one!',
  'HR enter' => 'enter',
+ 'HR logout' => 'LogOut',
+ 'HR profile' => 'Profile',
  // validation
  // name
  'name required' => 'please enter your name ',
