@@ -50,8 +50,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center"
-                href="{{ URL::route('index-homePage', app()->getLocale()) }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
 
                 <img class="img-fluid" src="{{ asset('images/logo.png') }}" alt="">
             </a>
@@ -61,7 +60,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item  active">
-                <a class="nav-link text-center" href="{{ URL::route('admin-homePage', app()->getLocale()) }}">
+                <a class="nav-link text-center" href="{{ URL::route('admin-homePage') }}">
                     <i class="fas fa-fw fa-tachometer-alt "></i>
                     <span>لوحة التحكم</span>
                 </a>
@@ -87,13 +86,12 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner  rounded">
                         <h6 class="collapse-header ">تخصيص</h6>
-                        <a class="collapse-item"
-                            href="{{ URL::route('admin-CreateBlog', app()->getLocale()) }}">إضافة
+                        <a class="collapse-item" href="{{ URL::route('admin-CreateBlog') }}">إضافة
                             مقالة</a>
-                        <a class="collapse-item" href="{{ URL::route('admin-EditBlog', app()->getLocale()) }}">تعديل
+                        <a class="collapse-item" href="{{ URL::route('admin-EditBlog') }}">تعديل
                             مقالة </a>
-                        <a class="collapse-item"
-                            href="{{ URL::route('admin-addcategory', app()->getLocale()) }}">إضافة فئة جديدة </a>
+                        <a class="collapse-item" href="{{ URL::route('admin-addcategory') }}">إضافة فئة جديدة </a>
+                        <a class="collapse-item" href="{{ URL::route('admin-EditCategory') }}">تعديل فئة </a>
                     </div>
                 </div>
             </li>
@@ -434,8 +432,7 @@
                         <div class="modal-footer d-flex flex-row-reverse">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">إلغاء</button>
                             {{-- <a class="btn btn-primary" href="#">تسجيل الخروج</a> --}}
-                            <form class=""
-                                action="{{ URL::route('logout-page', app()->getLocale()) }}" method="POST">
+                            <form class="" action="logout" method="POST">
                                 @csrf
                                 <button class="btn btn-primary" type="submit">تسجيل الخروج</button>
                             </form>

@@ -19,5 +19,9 @@ class Blog extends Authenticatable
         'u_id',
         'c_id',
     ];
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'c_id');
+    }
     use HasFactory;
 }

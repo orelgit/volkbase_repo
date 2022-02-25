@@ -43,4 +43,8 @@ class CategoryController extends Controller
 
         return redirect(route('admin-addcategory', app()->getLocale()))->with('success', 'good category created');
     }
+    public function EditCategory()
+    {
+        return view('admin.blog.editcategory');
+    }
 }

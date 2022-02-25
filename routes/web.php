@@ -36,22 +36,32 @@ Route::group(['prefix' => '{lang}'], function () {
  Route::get('login', [SessionsController::class, 'create'])->name('login-page')->middleware('guest');
  Route::post('login', [SessionsController::class, 'store'])->name('login-page')->middleware('guest');
  Route::post('logout', [SessionsController::class, 'destroy'])->name('logout-page')->middleware('auth');
+});
 
- // ------------>الانتقال الى الصفحة الادمن وكامل الصلاحيات <------------
- Route::middleware('admin')->group(function () {
+// ------------>الانتقال الى الصفحة الادمن وكامل الصلاحيات <------------
+Route::middleware('admin')->group(function () {
 
-  Route::get('admin', [Admin\AdminPagesController::class, 'admin'])->name('admin-homePage');
+ Route::get('admin/dash', [
+  Admin\AdminPagesController::class, 'admin'
+ ])->name('admin-homePage');
 
-  //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Blog <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-  // -----------> add new blog <---------------------------
-  Route::get('admin/Add-blog', [Admin\Blog\BlogController::class, 'create'])->name('admin-CreateBlog');
-  Route::post('admin/Add-blog', [Admin\Blog\BlogController::class, 'store'])->name('admin-CreateBlog');
-  // -----------------------> edit blog <---------------------------
-  Route::get('admin/Edit-blog', [Admin\Blog\BlogController::class, 'EditBlog'])->name('admin-EditBlog');
-  // -----------------------> Add category <---------------------------
-  Route::get('admin/add-category', [Admin\Blog\CategoryController::class, 'create'])->name('admin-addcategory');
-  Route::post('admin/add-category', [Admin\Blog\CategoryController::class, 'store'])->name('admin-addcategory');
-  // ------------>الانتقال الى الصفحة ألبولق<------------
 
- });
+ //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Blog <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ // -----------> add new blog <---------------------------
+ Route::get('admin/Add-blog', [Admin\Blog\BlogController::class, 'create'])->name('admin-CreateBlog');
+ Route::post('admin/Add-blog', [Admin\Blog\BlogController::class, 'store'])->name('admin-CreateBlog');
+
+ // -----------> edit blog <---------------------------
+ Route::get('admin/Edit-blog', [Admin\Blog\BlogController::class, 'EditBlog'])->name('admin-EditBlog');
+ Route::get('admin/blogs/edit/{blog}', [Admin\Blog\BlogController::class, 'EditBlogWork'])->name('admin-EditBlog-work');
+ Route::patch('admin/blogs/{blog}', [Admin\Blog\BlogController::class, 'UpdateBlog'])->name('admin-UpdateBlog-work');
+ Route::delete('admin/blogs/{blog}', [Admin\Blog\BlogController::class, 'DestroyBlog'])->name('admin-DestroyBlog-work');
+
+
+ // -----------> Add category <---------------------------
+ Route::get('admin/add-category', [Admin\Blog\CategoryController::class, 'create'])->name('admin-addcategory');
+ Route::post('admin/add-category', [Admin\Blog\CategoryController::class, 'store'])->name('admin-addcategory');
+
+ // -----------> edit category <---------------------------
+ Route::get('admin/Edit-category', [Admin\Blog\CategoryController::class, 'EditCategory'])->name('admin-EditCategory');
 });

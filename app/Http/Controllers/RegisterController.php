@@ -56,7 +56,7 @@ class RegisterController extends Controller
                 'u_name' => $request->u_name,
                 'u_mobile' => $request->u_mobile,
                 'password' => $request->password,
-                'u_photo' => $request->u_photo,
+                'u_photo' => request()->file('u_photo')->store('Usersgimg'),
                 'u_email' => $request->u_email,
                 'ut_id' => 1,
             ]);

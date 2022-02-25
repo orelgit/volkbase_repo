@@ -7,8 +7,8 @@
         <h1 class="h3 mb-2 text-gray-800"> إضافة فئة </h1>
         <!-- Blog form -->
         <div class="row d-flex justify-content-center">
-            <form method="POST" action="{{ URL::route('admin-addcategory', app()->getLocale()) }}"
-                class="p-5 col-10 border " style="direction: rtl">
+            <form method="POST" action="{{ URL::route('admin-addcategory') }}" class="p-5 col-10 border "
+                style="direction: rtl">
                 @csrf
                 <div class="form-group row">
                     <label for="title" class="col-sm-2 col-form-label text-right text-primary">العنوان</label>

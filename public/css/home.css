@@ -686,6 +686,7 @@ textarea {
 
 .footer {
     background: var(--white);
+    box-shadow: var(--box-shadow);
 }
 
 .footer .box-container {
