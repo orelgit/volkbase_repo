@@ -24,7 +24,7 @@ class CategoryController extends Controller
     public function msgs()
     {
         return [
-            'c_name.required' => 'enter the name',
+            'c_name.required' => 'ادخل اسم الفئة',
         ];
     }
 
@@ -45,6 +45,35 @@ class CategoryController extends Controller
     }
     public function EditCategory()
     {
-        return view('admin.blog.editcategory');
+        // go to edit page
+        return view('admin.blog.editcategory', [
+            'categores' => Category::paginate(50)
+        ]);
+    }
+    public function EditCategoryWork(Category $category)
+    {
+        return view('Admin.Blog.editcategorywork', ['category' => $category]);
+    }
+
+    // update
+    public function UpdateCategory(Request $request, Category $category)
+    {
+        $valid = Validator::make($request->all(), $this->rules(), $this->msgs());
+        if ($valid->fails()) {
+            // return 'Error';
+            return back()->withErrors($valid)->withInput($request->all());
+        } else {
+            $category->update([
+                'c_name' => $request->c_name,
+                'c_note' => $request->c_note,
+            ]);
+        }
+
+        return back()->with('success', 'تم تحديث الفئة بنجاح');
+    }
+    public function DestroyCategory(Category $category)
+    {
+        $category->delete();
+        return back()->with('success', 'تم حذف الفئة بنجاح');
     }
 }

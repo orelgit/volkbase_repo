@@ -4,7 +4,11 @@
     <div class="container-fluid ">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800"> تعديل المدونة</h1>
+        <div class="d-flex flex-row-reverse align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">تعديل مقالة</h1>
+            <a href="/admin/Edit-blog" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> جدول المقالات</a>
+        </div>
         <!-- Blog form -->
         <div class="row d-flex justify-content-center">
             <form method="POST" action="{{ route('admin-UpdateBlog-work', $blog->b_id) }}" enctype="multipart/form-data"

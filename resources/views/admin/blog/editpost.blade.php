@@ -6,13 +6,17 @@
         <div class="container-fluid ">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-2 text-gray-800">تعديل مدونة</h1>
+            <div class="d-flex flex-row-reverse align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">جدول المقالات</h1>
+                <a href="/admin/Add-blog" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        class="fas fa-download fa-sm text-white-50"></i> انشاء مقالة</a>
+            </div>
 
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4 ">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">جدول المدونة</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">تعديل مدونة</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -36,14 +40,10 @@
                                     <th>الفئة</th>
                                     <th>تم نشرها في</th>
                                     <th>تم تعديلها في</th>
-                                    <th></th>
-                                    <th></th>
+
                                 </tr>
                             </tfoot>
                             <tbody>
-                                {{-- @php
-                                    $blogs = \App\Models\Blog::all();
-                                @endphp --}}
                                 @foreach ($blogs as $blog)
                                     <tr>
                                         <td>{{ $blog->b_title }}</td>
@@ -67,8 +67,6 @@
                                         </td>
                                     </tr>
                                 @endforeach
-
-
                             </tbody>
                         </table>
                     </div>

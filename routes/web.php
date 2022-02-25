@@ -64,4 +64,7 @@ Route::middleware('admin')->group(function () {
 
  // -----------> edit category <---------------------------
  Route::get('admin/Edit-category', [Admin\Blog\CategoryController::class, 'EditCategory'])->name('admin-EditCategory');
+ Route::get('admin/category/edit/{category}', [Admin\Blog\CategoryController::class, 'EditCategoryWork'])->name('admin-EditCategory-work');
+ Route::patch('admin/category/{category}', [Admin\Blog\CategoryController::class, 'UpdateCategory'])->name('admin-UpdateCategory-work');
+ Route::delete('admin/category/{category}', [Admin\Blog\CategoryController::class, 'DestroyCategory'])->name('admin-DestroyCategory-work');
 });

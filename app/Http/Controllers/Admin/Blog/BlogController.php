@@ -71,15 +71,12 @@ class BlogController extends Controller
     // update
     public function UpdateBlog(Request $request, Blog $blog)
     {
-
-
-
         $valid = Validator::make($request->all(), $this->rules(), $this->msgs());
         if ($valid->fails()) {
 
             return back()->withErrors($valid)->withInput($request->all());
         } else {
-            // here
+
             $imgBlog = $blog['b_img'];
             if ($imgBlog = $request->file('b_img')) {
 
