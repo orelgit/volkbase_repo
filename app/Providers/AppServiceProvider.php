@@ -33,8 +33,8 @@ class AppServiceProvider extends ServiceProvider
             return $user->ut_id == 2;
         });
 
-        Blade::if('admin', function () {
-            return request()->user()?->can('admin');
-        });
+        // Blade::if('admin', function () {
+        //     return request()->user()?->can('admin');
+        // });
     }
 }

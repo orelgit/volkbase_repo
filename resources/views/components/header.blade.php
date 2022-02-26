@@ -20,12 +20,15 @@
             <div id="lang-btn" class="fas fa-language"></div>
 
 
-            @admin
-            {{-- إظهار زر الادمن فقط للادمن --}}
-            <a href="{{ URL::route('admin-homePage', app()->getLocale()) }}">
-                <div class="fas fa-user-shield"></div>
-            </a>
-            @endadmin
+            @if (Auth::check() &&
+    auth()->user()->can('admin'))
+                {{-- إظهار زر الادمن فقط للادمن --}}
+                <a href="{{ URL::route('admin-homePage', app()->getLocale()) }}">
+                    <div class="fas fa-user-shield"></div>
+                </a>
+            @endif
+
+
 
 
             @auth
