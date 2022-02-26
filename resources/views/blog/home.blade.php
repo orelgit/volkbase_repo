@@ -27,83 +27,41 @@
     <section class="blog-container" id="posts">
 
 
-        <div class="blog-posts-container">
-
-            <div class="blog-post">
-                <img src="{{ asset('images/blog4.jpg') }}" alt="" class="image">
-                <div class="blog-date">
-                    <i class="far fa-clock"></i>
-                    <span>1st may, 2021</span>
+        <div style="overflow: hidden;" class="blog-posts-container">
+            @php
+                $blog = \App\Models\Blog::all();
+                $user = \App\Models\User::all();
+                $category = \App\Models\Category::all();
+            @endphp
+            @foreach ($blog as $blogs)
+                <div class="blog-post">
+                    <img src="{{ asset('storage/' . $blogs->b_img) }}" alt="" class="image">
+                    <div class="blog-date">
+                        <i class="far fa-clock"></i>
+                        <span>{{ $blogs->created_at->diffForHumans() }}</span>
+                    </div>
+                    <h3 class="blog-title">{{ $blogs->b_title }}</h3>
+                    <p style=" word-wrap:break-word;" class="blog-text">{{ $blogs->b_blog }}</p>
+                    <div class="blog-links">
+                        <a href="#" class="blog-user">
+                            <i class="far fa-user"></i>
+                            <span>{{ $blogs->user->u_name }}</span>
+                        </a>
+                        <a href="#" class="blog-user">
+                            <i class="far fa-dot-circle"></i>
+                            <span>{{ $blogs->category->c_name }}</span>
+                        </a>
+                        {{-- <a href="#" class="blog-icon">
+                            <i class="far fa-comment"></i>
+                            <span>(45)</span>
+                        </a>
+                        <a href="#" class="blog-icon">
+                            <i class="far fa-share-square"></i>
+                            <span>(29)</span>
+                        </a> --}}
+                    </div>
                 </div>
-                <h3 class="blog-title">{{ __('tran.BOGMINE mpost1 title') }}</h3>
-                <p class="blog-text">{{ __('tran.BOGMINE mpost1 disc') }}</p>
-                <p class="blog-text">{{ __('tran.BOGMINE mpost1 disc') }}</p>
-                <div class="blog-links">
-                    <a href="#" class="blog-user">
-                        <i class="far fa-user"></i>
-                        <span>{{ __('tran.BOGMINE mpost1 by') }}</span>
-                    </a>
-                    <a href="#" class="blog-icon">
-                        <i class="far fa-comment"></i>
-                        <span>(45)</span>
-                    </a>
-                    <a href="#" class="blog-icon">
-                        <i class="far fa-share-square"></i>
-                        <span>(29)</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-post">
-                <img src="{{ asset('images/blog5.jpg') }}" alt="" class="image">
-                <div class="blog-date">
-                    <i class="far fa-clock"></i>
-                    <span>1st may, 2021</span>
-                </div>
-                <h3 class="blog-title">{{ __('tran.BOGMINE mpost2 title') }}</h3>
-                <p class="blog-text">{{ __('tran.BOGMINE mpost2 disc') }}</p>
-                <p class="blog-text">{{ __('tran.BOGMINE mpost2 disc') }}</p>
-                <div class="blog-links">
-                    <a href="#" class="blog-user">
-                        <i class="far fa-user"></i>
-                        <span>{{ __('tran.BOGMINE mpost2 by') }}</span>
-                    </a>
-                    <a href="#" class="blog-icon">
-                        <i class="far fa-comment"></i>
-                        <span>(45)</span>
-                    </a>
-                    <a href="#" class="blog-icon">
-                        <i class="far fa-share-square"></i>
-                        <span>(29)</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-post">
-                <img src="{{ asset('images/blog6.jpg') }}" alt="" class="image">
-                <div class="blog-date">
-                    <i class="far fa-clock"></i>
-                    <span>1st may, 2021</span>
-                </div>
-                <h3 class="blog-title">{{ __('tran.BOGMINE mpost3 title') }}</h3>
-                <p class="blog-text">{{ __('tran.BOGMINE mpost3 disc') }}</p>
-                <p class="blog-text">{{ __('tran.BOGMINE mpost3 disc') }}</p>
-                <div class="blog-links">
-                    <a href="#" class="blog-user">
-                        <i class="far fa-user"></i>
-                        <span>{{ __('tran.BOGMINE mpost3 by') }}</span>
-                    </a>
-                    <a href="#" class="blog-icon">
-                        <i class="far fa-comment"></i>
-                        <span>(45)</span>
-                    </a>
-                    <a href="#" class="blog-icon">
-                        <i class="far fa-share-square"></i>
-                        <span>(29)</span>
-                    </a>
-                </div>
-            </div>
-
+            @endforeach
         </div>
 
         <div class="blog-sidebar">
@@ -126,36 +84,21 @@
             <div class="blog-box">
                 <h3 class="blog-title">{{ __('tran.BOGCAT head title') }}</h3>
                 <div class="blog-category">
-                    <a href="#"> {{ __('tran.BOGCAT title1') }} <span>42</span></a>
-                    <a href="#"> {{ __('tran.BOGCAT title2') }} <span>75</span> </a>
-                    <a href="#"> {{ __('tran.BOGCAT title3') }} <span>22</span> </a>
-                    <a href="#"> {{ __('tran.BOGCAT title4') }} <span>48</span> </a>
-                    <a href="#"> {{ __('tran.BOGCAT title5') }} <span>39</span> </a>
-                    <a href="#"> {{ __('tran.BOGCAT title6') }} <span>12</span> </a>
-                    <a href="#"> {{ __('tran.BOGCAT title7') }} <span>32</span> </a>
-
+                    @foreach ($category as $categories)
+                        <a href="#"> {{ $categories->c_name }} <span>42</span></a>
+                    @endforeach
                 </div>
             </div>
 
             <div class="blog-box">
                 <h3 class="blog-title">{{ __('tran.BOGPR head title') }}</h3>
                 <div class="blog-p-post">
-                    <a href="#">
-                        <h3>{{ __('tran.BOGPR ppost1') }}</h3>
-                        <span><i class="far fa-clock"></i>1st may, 2021</span>
-                    </a>
-                    <a href="#">
-                        <h3>{{ __('tran.BOGPR ppost2') }}</h3>
-                        <span><i class="far fa-clock"></i>1st may, 2021</span>
-                    </a>
-                    <a href="#">
-                        <h3>{{ __('tran.BOGPR ppost3') }}</h3>
-                        <span><i class="far fa-clock"></i>1st may, 2021</span>
-                    </a>
-                    <a href="#">
-                        <h3>{{ __('tran.BOGPR ppost4') }}</h3>
-                        <span><i class="far fa-clock"></i>1st may, 2021</span>
-                    </a>
+                    @foreach ($blog as $blogs)
+                        <a href="#">
+                            <h3>{{ $blogs->b_title }}</h3>
+                            <span><i class="far fa-clock"></i>{{ $blogs->created_at->diffForHumans() }}</span>
+                        </a>
+                    @endforeach
                 </div>
             </div>
 

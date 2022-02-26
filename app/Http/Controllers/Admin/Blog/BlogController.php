@@ -76,7 +76,7 @@ class BlogController extends Controller
 
             return back()->withErrors($valid)->withInput($request->all());
         } else {
-
+            // here
             $imgBlog = $blog['b_img'];
             if ($imgBlog = $request->file('b_img')) {
 

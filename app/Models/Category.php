@@ -15,9 +15,9 @@ class Category extends Authenticatable
         'c_name',
         'c_note',
     ];
-    // public function blogs()
-    // {
-    //     return $this->hasMany(Blog::class);
-    // }
+    public function blog()
+    {
+        return $this->hasMany(Blog::class);
+    }
     use HasFactory;
 }

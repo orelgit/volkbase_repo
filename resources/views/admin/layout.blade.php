@@ -107,8 +107,9 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">تخصيص</h6>
-                        <a class="collapse-item" href="utilities-color.html">تعديل مستخدم</a>
-                        <a class="collapse-item" href="utilities-border.html">إضافة مستخدم</a>
+                        <a class="collapse-item" href="{{ URL::route('admin-adduser') }}">إضافة مستخدم</a>
+                        <a class="collapse-item" href="{{ URL::route('admin-EditUser') }}">تعديل مستخدم</a>
+
 
                     </div>
                 </div>
@@ -208,7 +209,7 @@
                             <a class="nav-link  dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="img-profile rounded-circle"
-                                    src="{{ asset('images/undraw_profile.svg') }}">
+                                    src="{{ asset('storage/' . auth()->user()->u_photo) }}">
                                 <span
                                     class=" ml-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->u_name }}</span>
                             </a>

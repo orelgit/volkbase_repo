@@ -28,4 +28,8 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($password);
     }
+    public function user_type()
+    {
+        return $this->belongsTo(User_type::class, 'ut_id');
+    }
 }

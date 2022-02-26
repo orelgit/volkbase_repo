@@ -82,13 +82,14 @@
     border: var(--border);
     border-radius: 0.5rem;
     margin-bottom: 1.5rem;
+    overflow: hidden;
 }
 
 .blog-container .blog-posts-container .blog-post .image {
     height: 40rem;
     width: 100%;
     border-radius: 0.5rem;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .blog-container .blog-posts-container .blog-post .date {
@@ -108,6 +109,7 @@
     font-size: 1.6rem;
     line-height: 1.7;
     padding: 1rem 0;
+    word-wrap: break-word;
 }
 
 .blog-container .blog-posts-container .blog-links {

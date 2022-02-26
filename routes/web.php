@@ -50,7 +50,6 @@ Route::middleware('admin')->group(function () {
  // -----------> add new blog <---------------------------
  Route::get('admin/Add-blog', [Admin\Blog\BlogController::class, 'create'])->name('admin-CreateBlog');
  Route::post('admin/Add-blog', [Admin\Blog\BlogController::class, 'store'])->name('admin-CreateBlog');
-
  // -----------> edit blog <---------------------------
  Route::get('admin/Edit-blog', [Admin\Blog\BlogController::class, 'EditBlog'])->name('admin-EditBlog');
  Route::get('admin/blogs/edit/{blog}', [Admin\Blog\BlogController::class, 'EditBlogWork'])->name('admin-EditBlog-work');
@@ -61,10 +60,19 @@ Route::middleware('admin')->group(function () {
  // -----------> Add category <---------------------------
  Route::get('admin/add-category', [Admin\Blog\CategoryController::class, 'create'])->name('admin-addcategory');
  Route::post('admin/add-category', [Admin\Blog\CategoryController::class, 'store'])->name('admin-addcategory');
-
  // -----------> edit category <---------------------------
  Route::get('admin/Edit-category', [Admin\Blog\CategoryController::class, 'EditCategory'])->name('admin-EditCategory');
  Route::get('admin/category/edit/{category}', [Admin\Blog\CategoryController::class, 'EditCategoryWork'])->name('admin-EditCategory-work');
  Route::patch('admin/category/{category}', [Admin\Blog\CategoryController::class, 'UpdateCategory'])->name('admin-UpdateCategory-work');
  Route::delete('admin/category/{category}', [Admin\Blog\CategoryController::class, 'DestroyCategory'])->name('admin-DestroyCategory-work');
+
+
+ // -----------> Add user <---------------------------
+ Route::get('admin/add-user', [Admin\Users\UsersController::class, 'create'])->name('admin-adduser');
+ Route::post('admin/add-user', [Admin\Users\UsersController::class, 'store'])->name('admin-adduser');
+ // -----------> edit user <---------------------------
+ Route::get('admin/Edit-user', [Admin\Users\UsersController::class, 'EditUser'])->name('admin-EditUser');
 });
+Route::get('admin/user/edit/{user}', [Admin\Users\UsersController::class, 'EditUserWork'])->name('admin-EditUser-work');
+Route::patch('admin/user/{user}', [Admin\Users\UsersController::class, 'UpdateUser'])->name('admin-UpdateUser-work');
+Route::delete('admin/user/{user}', [Admin\Users\UsersController::class, 'DestroyUser'])->name('admin-DestroyUser-work');

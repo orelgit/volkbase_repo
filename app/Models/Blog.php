@@ -23,5 +23,9 @@ class Blog extends Authenticatable
     {
         return $this->belongsTo(Category::class, 'c_id');
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'u_id');
+    }
     use HasFactory;
 }
