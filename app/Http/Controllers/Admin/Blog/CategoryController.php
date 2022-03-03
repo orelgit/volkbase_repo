@@ -73,6 +73,7 @@ class CategoryController extends Controller
     }
     public function DestroyCategory(Category $category)
     {
+        $category->blog()->delete();
         $category->delete();
         return back()->with('success', 'تم حذف الفئة بنجاح');
     }

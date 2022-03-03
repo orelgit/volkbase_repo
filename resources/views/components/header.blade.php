@@ -2,7 +2,7 @@
 
 @section('header')
     <header class="header">
-        <a href="#" class="logo"><img src="{{ asset('images/logo2.png') }}" alt=""></a>
+        <a href="/" class="logo"><img src="{{ asset('images/logo2.png') }}" alt=""></a>
 
         <nav class="navbar">
             <a href="{{ URL::route('index-homePage', app()->getLocale()) }}">{{ __('tran.home') }}</a>
@@ -18,18 +18,15 @@
             <div id="menu-btn" class="fas fa-bars"></div>
             {{-- <div id="search-btn" class="fas fa-search"></div> --}}
             <div id="lang-btn" class="fas fa-language"></div>
-
+            {{-- <div id="" class=""></div> --}}
 
             @if (Auth::check() &&
     auth()->user()->can('admin'))
                 {{-- إظهار زر الادمن فقط للادمن --}}
-                <a href="{{ URL::route('admin-homePage', app()->getLocale()) }}">
+                <a title="Admin Dashboard" href="{{ URL::route('admin-homePage') }}">
                     <div class="fas fa-user-shield"></div>
                 </a>
             @endif
-
-
-
 
             @auth
                 {{-- إظهار اسم المستخدم وزر الخروج اذا كان مسجل دخوله --}}
@@ -37,15 +34,15 @@
                 <!-- profile -->
                 <form class="aicon" action="{{ URL::route('logout-page', app()->getLocale()) }}" method="POST">
                     @csrf
-                    <button class="fas fa-sign-out aicon" type="submit"></button>
+                    <button title="Log out" class="fas fa-sign-out aicon" type="submit"></button>
                 </form>
-                <div class="aicon"><a href="">{{ auth()->user()->u_name }}</a></div>
+                {{-- <div title="Profile" class="aicon"><a href="">{{ auth()->user()->u_name }}</a></div> --}}
 
 
                 {{-- إظهار تسجيل الدخول وتسجيل حساب اذا كان مش مسجل --}}
             @else
-                <div> <a href="{{ URL::route('login-page', app()->getLocale()) }}" id="login-btn"
-                        class="fas fa-user aicon"></a></div>
+                <div> <a href="" id="login-btn" class="fas fa-envelope aicon"></a>
+                </div>
 
             @endauth
 

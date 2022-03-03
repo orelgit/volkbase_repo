@@ -17,7 +17,7 @@ class Category extends Authenticatable
     ];
     public function blog()
     {
-        return $this->hasMany(Blog::class);
+        return $this->hasMany(Blog::class, 'c_id');
     }
     use HasFactory;
 }

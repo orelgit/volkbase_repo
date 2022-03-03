@@ -12,6 +12,7 @@ class Blog extends Authenticatable
 {
     protected $table = 'blogs';
     protected $primaryKey = 'b_id';
+    protected $foreignKey = 'c_id';
     protected $fillable = [
         'b_id',
         'b_blog',

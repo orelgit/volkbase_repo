@@ -1,95 +1,104 @@
 @extends('admin.layout')
 @section('content')
     <!-- Begin Page Content -->
-    <div class="container-fluid ">
+    <!-- Page Heading -->
+    <div class="d-flex justify-content-between mb-5 mt-4 ">
+        <h1 class="h3 text-primary">إضافة مستخدم</h1>
+        <a href="/admin/Edit-user" class=" btn btn-primary shadow-sm me-3"> عرض المستخدمين <i
+                class="fas fa-eye fa-sm text-white-50 ms-1"></i></a>
+    </div>
+    <div class="container">
+        <div class="row d-flex justify-content-center mb-3">
+            <div class="card bg-white col-10 shadow  ">
+                <div class="card-body  ">
+                    <form method="POST" action="{{ URL::route('admin-adduser') }}" enctype="multipart/form-data">
+                        @csrf
 
-        <!-- Page Heading -->
-        <div class="d-flex flex-row-reverse align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">إضافة مستخدم</h1>
-            <a href="/admin/Edit-user" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-download fa-sm text-white-50"></i> جدول المستخدمين</a>
-        </div> <!-- users form -->
+
+                        {{-- name --}}
+                        <div class="mb-3 ">
+                            <div class="col-lg-8 col-md-12">
+                                <label for="name" class="form-label text-black fs-5 fw-bold">الاسم</label>
+                                <input value="{{ old('u_name') }}" type="text" id="name" name="u_name"
+                                    class="form-control bg-light" id="name">
+                                @error('u_name')
+                                    <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
+                                @enderror
+                            </div>
+                        </div>
 
 
+                        {{-- phone --}}
+                        <div class="mb-3">
+                            <div class="col-lg-8 col-md-12">
+                                <label for="phone" class="form-label text-black fs-5 fw-bold">رقم الهاتف</label>
+                                <input value="{{ old('u_mobile') }}" class="form-control bg-light" type="text" id="number"
+                                    name="u_mobile" id="phone">
+                                @error('u_mobile')
+                                    <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
+                                @enderror
+                            </div>
+                        </div>
 
-        <div class="row d-flex justify-content-center">
-            <form method="POST" action="{{ URL::route('admin-adduser') }}" enctype="multipart/form-data"
-                class="p-5 col-10 border " style="direction: rtl">
-                @csrf
+                        {{-- email --}}
+                        <div class="mb-3">
+                            <div class="col-lg-8 col-md-12">
+                                <label for="email" class="form-label text-black fs-5 fw-bold">البريد الالكتروني</label>
+                                <input value="{{ old('u_email') }}" type="email" id="email" name="u_email"
+                                    class="form-control bg-light">
+                                @error('u_email')
+                                    <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
+                                @enderror
+                            </div>
+                        </div>
 
-                <div class="form-group row">
-                    <label for="title" class="col-sm-2 col-form-label text-right text-primary">الاسم</label>
-                    <div class="col-sm-10">
-                        <input type="text" id="name" name="u_name" class="form-control">
+                        {{-- password --}}
+                        <div class="mb-3">
+                            <div class="col-lg-8 col-md-12">
+                                <label for="password" class="form-label text-black fs-5 fw-bold">كلمة المرور</label>
+                                <input type="password" id="password" name="password" class="form-control bg-light">
+                                @error('password')
+                                    <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
+                                @enderror
+                            </div>
+                        </div>
 
-                        @error('u_name')
-                            <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
-                        @enderror
-                    </div>
+                        {{-- img --}}
+                        <div class="col-lg-8 col-md-12">
+                            <div class="mb-3">
+                                <label for="img" class="form-label text-black fs-5 fw-bold">الصورة</label>
+                                <input value="{{ old('u_photo') }}" type="file" id="img" name="u_photo"
+                                    class="form-control bg-light">
+                                @error('u_photo')
+                                    <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
+                                @enderror
+                            </div>
+                        </div>
 
+                        {{-- user type --}}
+                        <div class="mb-3">
+                            <div class="col-lg-8 col-md-12">
+                                <label for="user_type" class="form-label text-black fs-5 fw-bold">نوع المستخدم</label>
+                                <select class="form-control form-select bg-light " id="user_type" name="ut_id">
+                                    @php
+                                        $user_types = \App\Models\User_type::all();
+                                    @endphp
+                                    @foreach ($user_types as $user_type)
+                                        <option value="{{ $user_type->ut_id }}">{{ $user_type->ut_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <div class="col-lg-6 col-md-12 ">
+                                <button type="submit" class="btn btn-primary form-control">إضافة</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-                <div class="form-group row">
-                    <label for="title" class="col-sm-2 col-form-label text-right text-primary">رقم الهاتف</label>
-                    <div class="col-sm-10">
-                        <input type="text" id="number" name="u_mobile" class="form-control">
-                        @error('u_mobile')
-                            <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="title" class="col-sm-2 col-form-label text-right text-primary">البريد الالكتروني</label>
-                    <div class="col-sm-10">
-                        <input type="email" id="email" name="u_email" class="form-control">
-                        @error('u_email')
-                            <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="title" class="col-sm-2 col-form-label text-right text-primary">كلمة المرور</label>
-                    <div class="col-sm-10">
-                        <input type="password" id="password" name="password" class="form-control">
-                        @error('password')
-                            <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
-                        @enderror
-                    </div>
-                </div>
-
-
-                <div class="form-group row">
-                    <label for="blog-img" class="col-sm-2 col-form-label text-primary">الصورة</label>
-                    <div class="col-sm-10">
-                        <input type="file" id="photo" name="u_photo" class="form-control">
-                        @error('u_photo')
-                            <h6 class="mt-2 text-danger"> <i class="fas fa-times"></i> {{ $message }}</h6>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="user_type" class="col-sm-2 col-form-label text-primary">نوع المستخدم</label>
-                    <div class="col-sm-10">
-                        <select class="form-control" id="ut_id" name="ut_id">
-                            @php
-                                $user_types = \App\Models\User_type::all();
-                            @endphp
-                            @foreach ($user_types as $user_type)
-                                <option value="{{ $user_type->ut_id }}">{{ $user_type->ut_name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group row" style="direction: ltr">
-                    <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary form-control">نشر</button>
-                    </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 @endsection

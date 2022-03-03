@@ -33,11 +33,12 @@ Route::group(['prefix' => '{lang}'], function () {
  Route::post('register', [RegisterController::class, 'store'])->name('register-page')->middleware('guest');
 
  // ------------>الانتقال الى صفحة تسجيل الدخول<------------
- Route::get('login', [SessionsController::class, 'create'])->name('login-page')->middleware('guest');
- Route::post('login', [SessionsController::class, 'store'])->name('login-page')->middleware('guest');
+ Route::get('v_login_admin', [SessionsController::class, 'create'])->name('login-page')->middleware('guest');
+ Route::post('v_login_admin', [SessionsController::class, 'store'])->name('login-page')->middleware('guest');
  Route::post('logout', [SessionsController::class, 'destroy'])->name('logout-page')->middleware('auth');
 });
 
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ADMIN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // ------------>الانتقال الى الصفحة الادمن وكامل الصلاحيات <------------
 Route::middleware('admin')->group(function () {
 
@@ -66,6 +67,7 @@ Route::middleware('admin')->group(function () {
  Route::patch('admin/category/{category}', [Admin\Blog\CategoryController::class, 'UpdateCategory'])->name('admin-UpdateCategory-work');
  Route::delete('admin/category/{category}', [Admin\Blog\CategoryController::class, 'DestroyCategory'])->name('admin-DestroyCategory-work');
 
+ //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> users <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
  // -----------> Add user <---------------------------
  Route::get('admin/add-user', [Admin\Users\UsersController::class, 'create'])->name('admin-adduser');

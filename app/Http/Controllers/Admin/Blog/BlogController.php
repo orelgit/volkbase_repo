@@ -98,6 +98,7 @@ class BlogController extends Controller
     }
     public function DestroyBlog(Blog $blog)
     {
+
         $blog->delete();
         return back()->with('success', 'تم حذف المقالة بنجاح');
     }

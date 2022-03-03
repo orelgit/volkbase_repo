@@ -59,7 +59,7 @@ class UsersController extends Controller
                 'u_name' => $request->u_name,
                 'u_mobile' => $request->u_mobile,
                 'password' => $request->password,
-                'u_photo' => request()->file('u_photo')->store('Usersimg'),
+                'u_photo' => $request->file('u_photo')->store('Usersimg'),
                 'u_email' => $request->u_email,
                 'ut_id' => $request->ut_id,
             ]);
@@ -82,14 +82,19 @@ class UsersController extends Controller
 
 
     // update user
-    public function UpdateUser(User $user)
+    public function UpdateUser(Request $request, User $user)
     {
-
-        $user->update([
-            'u_name' => request()->u_name,
-            'u_mobile' => request()->u_mobile,
-            'ut_id' => request()->ut_id,
-        ]);
+        $valid = Validator::make($request->all(), $this->rules(), $this->msgs());
+        if ($valid->fails()) {
+            // return 'Error';
+            return back()->withErrors($valid)->withInput($request->all());
+        } else {
+            $user->update([
+                'u_name' => request()->u_name,
+                'u_mobile' => request()->u_mobile,
+                'ut_id' => request()->ut_id,
+            ]);
+        }
 
         return back()->with('success', 'تم تحديث المستخدم بنجاح');
     }
