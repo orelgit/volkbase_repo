@@ -59,7 +59,7 @@ class UsersController extends Controller
                 'u_name' => $request->u_name,
                 'u_mobile' => $request->u_mobile,
                 'password' => $request->password,
-                'u_photo' => $request->file('u_photo')->store('Usersimg'),
+                'u_photo' => request()->file('u_photo')->store('Usersimg'),
                 'u_email' => $request->u_email,
                 'ut_id' => $request->ut_id,
             ]);

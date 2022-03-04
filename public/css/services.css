@@ -1,0 +1,20 @@
+a {
+    text-decoration: none;
+}
+.big-font {
+    font-size: 250px;
+}
+.relitve {
+    position: absolute;
+}
+.bg-img {
+    background-image: url("../images/zzzzzzz.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    margin-top: 0;
+}
+.margin {
+    margin-top: 100px;
+}

@@ -28,6 +28,18 @@ Route::group(['prefix' => '{lang}'], function () {
  // ------------>الانتقال الى الصفحة البلوق<------------
  Route::get('blog', [HomeController::class, 'blog'])->name('blog-homePage');
 
+ // ------------>الانتقال الى الصفحة الخدمات<------------
+ Route::get('services', [HomeController::class, 'services'])->name('services-homePage');
+
+ // ------------>الانتقال الى الصفحة تواصل معنا<------------
+ Route::get('contact', [HomeController::class, 'contact'])->name('contact-homePage');
+
+ // ------------>الانتقال الى الصفحة تواصل معنا<------------
+ Route::get('about', [HomeController::class, 'about'])->name('about-homePage');
+
+ // ------------>الانتقال الى الصفحة تواصل معنا<------------
+ Route::get('privacy', [HomeController::class, 'privacy'])->name('privacy-homePage');
+
  // ------------>الانتقال الى الصفحة تسجيل حساب جديد<------------
  Route::get('register', [RegisterController::class, 'create'])->name('register-page')->middleware('guest');
  Route::post('register', [RegisterController::class, 'store'])->name('register-page')->middleware('guest');

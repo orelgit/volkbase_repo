@@ -14,6 +14,7 @@
 
 
 
+
     {{-- ///> fontawsom icons </// --}}
     <link rel="stylesheet" href="{{ url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css') }}">
 
@@ -26,8 +27,6 @@
     @yield('header')
     {{-- -----> content <------ --}}
     @yield('content')
-
-
     {{-- -----> footer <------ --}}
     @yield('footer')
 

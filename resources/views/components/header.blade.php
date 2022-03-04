@@ -6,10 +6,10 @@
 
         <nav class="navbar">
             <a href="{{ URL::route('index-homePage', app()->getLocale()) }}">{{ __('tran.home') }}</a>
-            <a href="#service">{{ __('tran.services') }}</a>
-            <a href="#blog">{{ __('tran.blog') }}</a>
-            <a href="#contact">{{ __('tran.contact') }}</a>
-            <a href="#about">{{ __('tran.about') }}</a>
+            <a href="{{ URL::route('services-homePage', app()->getLocale()) }}">{{ __('tran.services') }}</a>
+            <a href="{{ URL::route('blog-homePage', app()->getLocale()) }}">{{ __('tran.blog') }}</a>
+            <a href="{{ URL::route('contact-homePage', app()->getLocale()) }}">{{ __('tran.contact') }}</a>
+            <a href="{{ URL::route('about-homePage', app()->getLocale()) }}">{{ __('tran.about') }}</a>
 
         </nav>
 

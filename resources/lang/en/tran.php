@@ -78,6 +78,7 @@ return [
  'SE disc data' => 'Oracle database infrastructure and apex applications.',
  // Solutions
  'SE sol head title' => 'Our Solutions Take Care Of All Your Needs',
+ 'tech title' => 'We Use The Latest Development Technologies',
  'SE title hosting' => 'Hosting Management',
  'SE disc hosting' => 'We offer hosting for your website which includes unlimited email creation for your business, storage and security with our support.',
 
@@ -90,30 +91,22 @@ return [
  'BG btn' => 'Check It Out',
  // -----> contact Section <-----
  'CT head title' => 'contact',
- // form
- 'CT first' => 'first name',
- 'CT last' => 'last name',
- 'CT email' => 'email',
- 'CT message' => 'message',
- 'CT send btn' => 'send',
+ // content
+ 'CT title' => 'Do you have any questions or requests?',
+ 'CT disc' => 'Our team saves time to respond to messages from you we would like to read your thoughts and requests',
+ 'CT btn' => 'Contact Us',
  // -----> about  Section <-----
  'AT head title' => 'about us',
  'AT title' => 'Who We Are ?',
  'AT disc' => 'Volkbase is a small company that includes professionals specialized in many fields of IT services. We are committed to delivering various IT services which include Web developments, mobile development, networking and more. Our number one priority is customer satisfaction. We tend to go out of our way to cater to every need when it comes to our clients. We are also certain that our delivered service will be conducted with the highest of standards. Our wide variety of IT services and after sale maintenance require us to be always available to be of help whenever needed. It’s our belief that we can provide you with the best possible solutions because we make sure that you will be completely satisfied of what we promise to provide.',
  // -----> footer  Section <-----
- 'FR head title' => 'Our Vision To be number one leader company in the industry of IT Services in Yemen and also to be recognized internationally',
+ 'FR head title' => 'Our Vision To be the number one leading company in the industry of IT Services in Yemen and also to be recognized internationally',
  // quick links
- 'FR quick title' => 'quick links',
+ 'FR quick title' => 'What we do ?',
  // Useful Links
- 'FR useful title' => 'Useful Links',
- 'FR questions' => 'ask questions',
- 'FR feedback' => 'send feedback',
- 'FR help' => 'help center',
- 'FR policy' => 'private policy',
- 'FR terms' => 'terms of use',
- 'FR created' => 'created by',
- 'FR company' => 'N4DA',
- 'FR rights' => 'all rights reserved!',
+ 'FR useful title' => 'Company',
+ 'privacy' => 'Privacy Policy',
+ 'FR rights' => 'Volkbase - All rights reserved © 2022',
 
 
  // welcome and good bey messages

@@ -17,4 +17,28 @@ class HomeController extends Controller
     {
         return view('blog.home');
     }
+
+    // الانتقال الى صفحة الخدمات
+    public function services()
+    {
+        return view('indexPages.services');
+    }
+
+    // الانتقال الى صفحة الخدمات
+    public function contact()
+    {
+        return view('indexPages.contact');
+    }
+
+    // الانتقال الى صفحة الخدمات
+    public function about()
+    {
+        return view('indexPages.about');
+    }
+
+    // الانتقال الى صفحة الخدمات
+    public function privacy()
+    {
+        return view('indexPages.privacy');
+    }
 }
