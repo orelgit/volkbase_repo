@@ -84,14 +84,14 @@ html::-webkit-scrollbar-thumb {
 .header .logo img {
     width: 100px;
 }
-.header .navbar a {
+.header .header-navbar a {
     font-size: 2rem;
     color: var(--main-color);
     text-transform: capitalize;
     margin: 0 1rem;
 }
 
-.header .navbar a:hover {
+.header .header-navbar a:hover {
     color: var(--second-color);
 }
 .header .icons {
@@ -835,7 +835,7 @@ html::-webkit-scrollbar-thumb {
     .header #menu-btn {
         display: inline-block;
     }
-    .header .navbar {
+    .header .header-navbar {
         position: absolute;
         top: 99%;
         left: 0;
@@ -847,11 +847,11 @@ html::-webkit-scrollbar-thumb {
         -webkit-transition: 0.2s linear;
         transition: 0.2s linear;
     }
-    .header .navbar.active {
+    .header .header-navbar.active {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-    .header .navbar a {
+    .header .header-navbar a {
         display: block;
         margin: 2rem;
     }

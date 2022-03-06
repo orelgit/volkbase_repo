@@ -4,7 +4,7 @@
     <header class="header">
         <a href="/" class="logo"><img src="{{ asset('images/logo2.png') }}" alt=""></a>
 
-        <nav class="navbar">
+        <nav class="header-navbar">
             <a href="{{ URL::route('index-homePage', app()->getLocale()) }}">{{ __('tran.home') }}</a>
             <a href="{{ URL::route('services-homePage', app()->getLocale()) }}">{{ __('tran.services') }}</a>
             <a href="{{ URL::route('blog-homePage', app()->getLocale()) }}">{{ __('tran.blog') }}</a>

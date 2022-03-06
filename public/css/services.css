@@ -1,20 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Graduate&family=Mada&family=Ubuntu&display=swap");
+:root {
+    --primary-color: #dae0f5;
+    --secondary-color: #5379f6;
+    --white-color: #ffffff;
+    --dark-color: #4364db;
+    --project-bg: #f0f8ff;
+    --menu-bg: #0c8195;
+
+    --title-color: #15141a;
+    --gray-color: #909090;
+    --link-color: #404040;
+    --p-color: #666262;
+
+    --font-weight-bold: bold;
+
+    --h1-font-size: 42px;
+    --h2-font-size: 32px;
+    --h3-font-size: 24px;
+    --p-font-size: 18px;
+    --base-font-size: 16px;
+    --menu-font-size: 14px;
+
+    --border-radius-large: 100px;
+    --border-radius-small: 5px;
+}
+
+body {
+    background: rgb(252, 252, 252);
+    font-family: "Ubuntu", "Cairo";
+}
+
+/*---------------------------------------
+     TYPOGRAPHY              
+  -----------------------------------------*/
+
+h1 {
+    color: var(--title-color);
+    font-size: var(--h1-font-size);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    font-weight: 100;
+    font-family: "Graduate", "Cairo";
+    color: var(--secondary-color);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+h4 {
+    color: var(--gray-color);
+    font-family: var(--base-font-family);
+    font-size: var(--p-font-size);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--p-color);
+    font-size: var(--p-font-size);
+    line-height: 1.5em;
+}
+
+b,
+strong {
+    letter-spacing: 0;
+    color: var(--secondary-color);
+}
+
+/*  BLOCKQUOTES */
+.quote {
+    position: relative;
+    margin: 0;
+}
+
+.quote::after {
+    content: "“";
+    position: absolute;
+    bottom: -80px;
+    left: 20px;
+    font-family: times;
+    color: var(--gray-color);
+    font-weight: var(--font-weight-bold);
+    font-size: 14em;
+    line-height: 0;
+    opacity: 0.1;
+}
+
+blockquote {
+    border-left: 5px solid rgba(0, 0, 0, 0.05);
+    display: block;
+    margin: 42px 0;
+    padding: 14px 22px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* BUTTON */
+.custom-btn {
+    background: transparent;
+    border: 2px solid var(--dark-color);
+    font-family: var(--title-font-family);
+    cursor: pointer;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    -webkit-transition: 0.2s linear;
+    transition: 0.2s linear;
+    border-radius: 5%;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+}
+
+.custom-btn.btn-bg {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: transparent;
+    transition: 0.2s linear;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+    background: var(--dark-color);
+    color: var(--white-color);
+    border-color: transparent;
+}
+
+/*---------------------------------------
+     GENERAL               
+  -----------------------------------------*/
+.mtop {
+    margin-top: 100px;
+}
+.fas-size {
+    font-size: 70px;
+    color: var(--secondary-color);
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 a {
+    color: var(--link-color);
+    font-weight: normal;
     text-decoration: none;
 }
-.big-font {
-    font-size: 250px;
+
+a:hover,
+a:active,
+a:focus {
+    color: var(--secondary-color);
+    outline: none;
+    text-decoration: none;
 }
-.relitve {
-    position: absolute;
+
+::selection {
+    background: var(--secondary-color);
+    color: var(--white-color);
 }
-.bg-img {
-    background-image: url("../images/zzzzzzz.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    margin-top: 0;
+
+.section-padding {
+    padding: 8em 0;
 }
-.margin {
-    margin-top: 100px;
+.section-padding-half {
+    padding: 4em 0;
+}
+
+/*---------------------------------------
+     HERO              
+  -----------------------------------------*/
+
+.hero {
+    position: relative;
+    padding: 5em 0;
+    overflow: hidden;
+}
+
+.hero-bg {
+    background: linear-gradient(
+        170deg,
+        var(--primary-color) 64%,
+        rgb(252, 252, 252) 30%
+    );
+}
+
+.hero-image {
+    background-color: white;
+    border-radius: 50%;
+}
+
+/*---------------------------------------
+     RESPONSIVE STYLES              
+  -----------------------------------------*/
+
+@media screen and (max-width: 991px) {
+    .hero {
+        padding-top: 14em;
+    }
+
+    .hero-text {
+        bottom: 2em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
 }

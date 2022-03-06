@@ -1,4 +1,4 @@
-let navbar = document.querySelector('.header .navbar');
+let navbar = document.querySelector('.header .header-navbar');
 // let prositForm = document.querySelector('.header .prosit-form');
 // let loginForm = document.querySelector('.header .login-form');
 let langForm = document.querySelector('.header .lang-form');

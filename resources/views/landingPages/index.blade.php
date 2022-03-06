@@ -22,7 +22,7 @@
         <h1 class="heading">{{ __('tran.SE head title') }}</h1>
         <div class="row">
             <div class="image">
-                <img src="{{ asset('images/74.svg') }}" alt="">
+                <img data-aos="fade-up" data-aos-delay="300" src="{{ asset('images/74.svg') }}" alt="">
             </div>
             <div class="content"
                 style="{{ app()->getLocale() == 'ar' ? 'text-align: right' : 'text-align: left' }}">

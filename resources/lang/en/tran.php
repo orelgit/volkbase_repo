@@ -90,7 +90,7 @@ return [
  // -----> blog Section <-----
  'BG btn' => 'Check It Out',
  // -----> contact Section <-----
- 'CT head title' => 'contact',
+ 'CT head title' => 'contact us',
  // content
  'CT title' => 'Do you have any questions or requests?',
  'CT disc' => 'Our team saves time to respond to messages from you we would like to read your thoughts and requests',
