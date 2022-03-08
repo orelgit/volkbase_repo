@@ -13,7 +13,24 @@
 body {
     background: rgb(252, 252, 252);
 }
-
+.mtop {
+    margin-top: 100px;
+}
+.mbottom {
+    margin-bottom: 100px;
+}
+.mend {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+a {
+    text-decoration: none;
+}
+p {
+    font-size: 18px;
+    color: #666262;
+    line-height: 1.5em;
+}
 * {
     /* // font-family: 'Graduate', cursive; */
     font-family: "Ubuntu", "Cairo";
@@ -352,13 +369,9 @@ html::-webkit-scrollbar-thumb {
 /* Heading */
 
 .heading {
-    margin: 2rem;
     padding-top: 6rem;
-    display: inline-block;
     font-size: 3.5rem;
     color: var(--main-color);
-    position: relative;
-    /* letter-spacing: 0.2rem; */
     font-family: "Graduate", "Cairo";
 }
 
@@ -367,7 +380,7 @@ html::-webkit-scrollbar-thumb {
 /* services */
 .service {
     width: 100vw;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .service .row {
@@ -430,8 +443,8 @@ html::-webkit-scrollbar-thumb {
     position: relative;
     max-width: 300px;
     height: 150px;
-    background-color: rgba(195, 222, 247, 0.288);
-    margin-top: 50px;
+    /* background-color: #dce2f77a; */
+    margin-top: 60px;
     margin-left: 30px;
     margin-bottom: 50px;
     padding: 20px 15px;
@@ -441,7 +454,8 @@ html::-webkit-scrollbar-thumb {
 }
 
 .row .mycard:hover {
-    height: 300px;
+    height: 315px;
+    /* box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5); */
 }
 
 .row .mycard .cimg {
@@ -451,7 +465,7 @@ html::-webkit-scrollbar-thumb {
     top: -60px;
     left: 20px;
     z-index: 1;
-    box-shadow: 0 3px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
 }
 
 .row .mycard .cimg img {
@@ -484,67 +498,6 @@ html::-webkit-scrollbar-thumb {
 }
 /* end cards */
 
-/* about */
-
-.about {
-    min-height: 100vh;
-    width: 100vw;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.about .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 4rem;
-}
-
-.about .row .content {
-    text-align: left;
-}
-
-.about .row .image img {
-    width: 50vw;
-}
-
-.about .row .content h3 {
-    font-size: 3rem;
-    color: black;
-}
-
-.about .row .content p {
-    font-size: 1.5rem;
-    color: #333;
-    padding: 1rem 0;
-}
-
-.about::before,
-.about::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    opacity: 0.1;
-    border-radius: 50%;
-}
-
-.about::before {
-    height: 50rem;
-    width: 50rem;
-    background: var(--second-color);
-    bottom: -10rem;
-    left: -10rem;
-}
-
-.about::after {
-    height: 60rem;
-    width: 60rem;
-    background-color: var(--main-color);
-    top: -10rem;
-    right: -10rem;
-}
-
 /* blog */
 .blog {
     margin-top: 50px;
@@ -571,9 +524,9 @@ html::-webkit-scrollbar-thumb {
 }
 .blog .banner-vid video {
     position: absolute;
-    top: 0;
+    top: -2%;
     left: 0;
-    width: 100%;
+    width: 90%;
     height: 80%;
     object-fit: cover;
 }
@@ -648,7 +601,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* Technologies */
-.card {
+.tech-card {
     transition: 0.3s;
     width: 30%;
     padding: 5px;

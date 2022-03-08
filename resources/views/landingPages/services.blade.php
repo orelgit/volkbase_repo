@@ -125,15 +125,15 @@
             </div>
             <div class="row mb-5 text-center">
                 <div class="col-lg-4">
-                    <h3 data-aos="flip-left" data-aos-delay="400"><i class="fas fa-desktop fas-size"></i></h3>
+                    <h3 data-aos="flip-left" data-aos-delay="100"><i class="fas fa-desktop fas-size"></i></h3>
                     <p class="para"> {{ __('services.Ability-panle') }}</p>
                 </div>
                 <div class="col-lg-4">
-                    <h3 data-aos="flip-left" data-aos-delay="600"><i class="fas fa-shield-alt fas-size"></i></h3>
+                    <h3 data-aos="flip-left" data-aos-delay="300"><i class="fas fa-shield-alt fas-size"></i></h3>
                     <p class="para">{{ __('services.Ability-Login') }}</p>
                 </div>
                 <div class="col-lg-4">
-                    <h3 data-aos="flip-left" data-aos-delay="800"><i class="fas fa-sign-in-alt fas-size"></i></h3>
+                    <h3 data-aos="flip-left" data-aos-delay="500"><i class="fas fa-sign-in-alt fas-size"></i></h3>
                     <p class="para">{{ __('services.Ability-Secure') }}</p>
                 </div>
             </div>

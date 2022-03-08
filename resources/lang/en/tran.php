@@ -98,7 +98,7 @@ return [
  // -----> about  Section <-----
  'AT head title' => 'about us',
  'AT title' => 'Who We Are ?',
- 'AT disc' => 'Volkbase is a small company that includes professionals specialized in many fields of IT services. We are committed to delivering various IT services which include Web developments, mobile development, networking and more. Our number one priority is customer satisfaction. We tend to go out of our way to cater to every need when it comes to our clients. We are also certain that our delivered service will be conducted with the highest of standards. Our wide variety of IT services and after sale maintenance require us to be always available to be of help whenever needed. It’s our belief that we can provide you with the best possible solutions because we make sure that you will be completely satisfied of what we promise to provide.',
+ 'AT disc' => 'Volkbase is a small company that includes professionals specialized in many fields of IT services. We are committed to delivering various IT services which include Web developments, mobile development, networking and more. Our number one priority is customer satisfaction. We tend to go out of our way to cater to every need when it comes to our clients.',
  // -----> footer  Section <-----
  'FR head title' => 'Our Vision To be the number one leading company in the industry of IT Services in Yemen and also to be recognized internationally',
  // quick links

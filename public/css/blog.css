@@ -1,3 +1,25 @@
+h2 {
+    font-size: 32px;
+    font-weight: 100;
+    font-family: "Graduate", "Cairo";
+    color: #5379f6;
+}
+
+.hero {
+    position: relative;
+    padding: 5em 0;
+    overflow: hidden;
+}
+
+.hero-bg {
+    background: linear-gradient(-170deg, #dae0f5 64%, rgb(252, 252, 252) 30%);
+}
+
+.hero-image {
+    background-color: white;
+    border-radius: 50%;
+}
+
 .blog-banner {
     min-height: 80vh;
     background-size: cover;

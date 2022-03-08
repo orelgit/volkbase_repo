@@ -7,10 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VolkBase</title>
     {{-- -----> links <------ --}}
+
+    <!-- Bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- ///> css </// --}}
     <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
+
+
 
     {{-- ///> smoothscroll </// --}}
     <link rel="stylesheet" href="{{ asset('css/smoothscroll/aos.css') }}">
@@ -41,6 +46,8 @@
     <script src="{{ asset('js/smoothscroll/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('js/smoothscroll/smoothscroll.js') }}"></script>
     <script src="{{ asset('js/smoothscroll/custom.js') }}"></script>
+    <!--  Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     {{-- flash --}}
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     {{-- menu --}}

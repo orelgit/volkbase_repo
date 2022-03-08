@@ -1,0 +1,23 @@
+.hero-bg {
+    background: linear-gradient(170deg, #dae0f5 64%, rgb(252, 252, 252) 30%);
+}
+.p-black {
+    color: black;
+}
+.bg {
+    background: #f1f1f1;
+}
+.mtop {
+    margin-top: 100px;
+}
+.mbottom {
+    margin-bottom: 100px;
+}
+.col-lg {
+    border-radius: 2%;
+    background: #f1f1f1;
+    transition: all 4s ease;
+}
+.col-lg:hover {
+    background-color: #ffffff;
+}

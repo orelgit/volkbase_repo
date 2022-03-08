@@ -3,8 +3,8 @@
 @section('content')
     <!-- home section starts  -->
     <section id="home" class="home">
-        <h1 class="banner">{{ __('tran.HE title text') }}</h1>
-        <h3 class="slogan">{{ __('tran.HE disc text') }}</h3>
+        <h1 data-aos="fade-up" class="banner">{{ __('tran.HE title text') }}</h1>
+        <h3 data-aos="fade-up" class="slogan">{{ __('tran.HE disc text') }}</h3>
         <a class="a-btn" href="#body">
             <span></span>
             <span></span>
@@ -19,58 +19,63 @@
     <!-- home section ends -->
     <!-- services -->
     <section id="body" class="service">
-        <h1 class="heading">{{ __('tran.SE head title') }}</h1>
-        <div class="row">
-            <div class="image">
-                <img data-aos="fade-up" data-aos-delay="300" src="{{ asset('images/74.svg') }}" alt="">
+        <h1 class="heading text-center" data-aos="fade-up">{{ __('tran.SE head title') }}</h1>
+
+        <div class="row  g-5 py-5" id="readMore">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/74.svg') }}"
+                    class="d-block mx-lg-auto img-fluid" width="400" loading="lazy">
             </div>
-            <div class="content"
-                style="{{ app()->getLocale() == 'ar' ? 'text-align: right' : 'text-align: left' }}">
-                <h3>{{ __('tran.SE title web') }}</h3>
-                <p>{{ __('tran.SE disc web') }}</p>
-                <a href="{{ URL::route('services-homePage', app()->getLocale()) }}"><button
-                        class="btn">{{ __('tran.btn') }}</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="content"
-                style="{{ app()->getLocale() == 'ar' ? 'text-align: right' : 'text-align: left' }}">
-                <h3>{{ __('tran.SE title mob') }}</h3>
-                <p>{{ __('tran.SE disc mob') }}</p>
-                <a href="{{ URL::route('services-homePage', app()->getLocale()) }}"><button
-                        class="btn">{{ __('tran.btn') }}</button></a>
-            </div>
-            <div class="image">
-                <img src="{{ asset('images/84.svg') }}" alt="">
+            <div class="col-lg-6">
+                <h1 data-aos="fade-up" data-aos-delay="100" class="display-5 lh-1 mb-3">
+                    {{ __('tran.SE title web') }}</h1>
+                <p data-aos="fade-up" data-aos-delay="200">{{ __('tran.SE disc web') }}</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="{{ URL::route('services-homePage', app()->getLocale()) }}"
+                        class="custom-btn btn-bg btn mt-3 text-white" data-aos="fade-up">{{ __('tran.btn') }}</a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="image">
-                <img src="{{ asset('images/282.svg') }}" alt="">
+
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5  align-items-center ">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3 ">
+                <h1 data-aos="fade-up" data-aos-delay="100" class="display-5 mb-3 lh-1">
+                    {{ __('tran.SE title mob') }}
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="200"> {{ __('tran.SE disc mob') }}</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                    <a href="{{ URL::route('services-homePage', app()->getLocale()) }}"
+                        class="custom-btn btn-bg btn mt-3 text-white" data-aos="fade-up">{{ __('tran.btn') }}</a>
+                </div>
             </div>
-            <div class="content"
-                style="{{ app()->getLocale() == 'ar' ? 'text-align: right' : 'text-align: left' }}">
-                <h3>{{ __('tran.SE title net') }}</h3>
-                <p>{{ __('tran.SE disc net') }}</p>
-                <a href="{{ URL::route('services-homePage', app()->getLocale()) }}"><button
-                        class="btn">{{ __('tran.btn') }}</button></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="content"
-                style="{{ app()->getLocale() == 'ar' ? 'text-align: right' : 'text-align: left' }}">
-                <h3>{{ __('tran.SE title data') }}</h3>
-                <p>{{ __('tran.SE disc data') }}</p>
-                <a href="{{ URL::route('services-homePage', app()->getLocale()) }}"><button
-                        class="btn">{{ __('tran.btn') }}</button></a>
-            </div>
-            <div class="image">
-                <img src="{{ asset('images/191.svg') }}" alt="">
+            <div class="col-lg-4 ">
+                <img class="d-block mx-lg-auto img-fluid " data-aos="fade-up" data-aos-delay="400"
+                    src=" {{ asset('images/84.svg') }}" alt="" width="400">
             </div>
         </div>
+
+
+        <div class="row  g-5 py-5  mb-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img data-aos="fade-up" data-aos-delay="400" src="{{ asset('images/282.svg') }}"
+                    class="d-block mx-lg-auto img-fluid " width="400" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 data-aos="fade-up" data-aos-delay="100" class="display-5 lh-1 mb-3">
+                    {{ __('tran.SE title net') }}</h1>
+                <p data-aos="fade-up" data-aos-delay="200"> {{ __('tran.SE disc net') }}</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="{{ URL::route('services-homePage', app()->getLocale()) }}"
+                        class="custom-btn btn-bg btn mt-3 text-white" data-aos="fade-up">{{ __('tran.btn') }}</a>
+                </div>
+            </div>
+        </div>
+
+
+
         <!-- cards -->
-        <h1 class="heading">{{ __('tran.SE sol head title') }}</h1>
-        <div class="row">
+        <h1 data-aos="fade-up" class="heading text-center ">{{ __('tran.SE sol head title') }}</h1>
+        <div class="row" data-aos="zoom-in">
             <div class="mycard">
                 <div class="cimg">
                     <img src="{{ asset('images/undraw_features_overview_re_2w78.svg') }}" alt="">
@@ -103,7 +108,7 @@
     </section>
     <!-- services end-->
     <!-- blog  -->
-    <section id="blog" class="blog">
+    <section id="blog" class="blog" data-aos="fade-up">
         <div class="banner-vid">
             <video autoplay muted loop src="{{ asset('images/blog.mp4') }}"></video>
             <h2>{{ __('BLOG') }}</h2>
@@ -113,74 +118,64 @@
     </section>
     <!-- blog end -->
     <!-- contact section starts  -->
-    <section id="contact" class="contact">
-        <h1 class="heading">{{ __('tran.CT head title') }}</h1>
-        <div class="row">
-            <div class="image">
-                <img src="{{ asset('images/undraw_team_spirit_re_yl1v (1).svg') }}" alt="">
-            </div>
-            <div style="{{ app()->getLocale() == 'ar' ? 'text-align: right' : 'text-align: left' }}"
-                class="content">
-
-                <h3>{{ __('tran.CT title') }}</h3>
-                <p>{{ __('tran.CT disc') }}</p>
-                <a href="{{ URL::route('contact-homePage', app()->getLocale()) }}"><button
-                        class="btn">{{ __('tran.CT btn') }}</button></a>
-
+    <h1 class="heading text-center" data-aos="fade-up">{{ __('tran.CT head title') }}</h1>
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5  align-items-center ">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3 ">
+            <h1 data-aos="fade-up" data-aos-delay="100" class="display-5 mb-3 lh-1">
+                {{ __('tran.CT title') }}
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200"> {{ __('tran.CT disc') }}</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                <a href="{{ URL::route('contact-homePage', app()->getLocale()) }}"
+                    class="custom-btn btn-bg btn mt-3 text-white" data-aos="fade-up">{{ __('tran.CT head title') }}</a>
             </div>
         </div>
-    </section>
+        <div class="col-lg-4 ">
+            <img class="d-block mx-lg-auto img-fluid " data-aos="fade-up" data-aos-delay="400"
+                src=" {{ asset('images/undraw_team_spirit_re_yl1v (1).svg') }}" alt="" width="400">
+        </div>
+    </div>
 
     <!-- contact section ends -->
     <!-- abuout section starts  -->
-    <section id="about" class="about">
-        <h1 class="heading">{{ __('tran.AT head title') }}</h1>
-        <div class="row">
-            <div class="content"
-                style="{{ app()->getLocale() == 'ar' ? 'text-align: right' : 'text-align: left' }}">
-                <h3>{{ __('tran.AT title') }}</h3>
-                <p>{{ __('tran.AT disc') }}</p>
-                <a href="{{ URL::route('about-homePage', app()->getLocale()) }}"><button
-                        class="btn">{{ __('tran.btn') }}</button></a>
-            </div>
-            <div class="image">
-                <img src="{{ asset('images/undraw_team_collaboration_re_ow29.svg') }}" alt="">
+    <h1 class="heading text-center" data-aos="fade-up">{{ __('tran.AT head title') }}</h1>
+
+    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5  align-items-center" id="readMore">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img data-aos="fade-up" data-aos-delay="400"
+                src="{{ asset('images/undraw_team_collaboration_re_ow29.svg') }}" class="d-block mx-lg-auto img-fluid"
+                width="400" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 data-aos="fade-up" data-aos-delay="100" class="display-5 lh-1 mb-3">
+                {{ __('tran.AT title') }}</h1>
+            <p data-aos="fade-up" data-aos-delay="200">{{ __('tran.AT disc') }}</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="{{ URL::route('about-homePage', app()->getLocale()) }}"
+                    class="custom-btn btn-bg btn mt-3 text-white" data-aos="fade-up">{{ __('tran.btn') }}</a>
             </div>
         </div>
-    </section>
+    </div>
     <!-- abuout section ends  -->
-    <section id="body" class="service" style="margin-bottom: 50px">
 
 
-        <!-- tech -->
-        <h1 class="heading">{{ __('tran.tech title') }}</h1>
-        <div class="row">
 
-            <div class="card">
-                <img src="{{ asset('images/asp.png') }}" alt="Avatar" style="width:50%">
-
+    <div class="px-4 pt-5 my-5 text-center ">
+        <h1 class="heading text-center " data-aos="fade-up" data-aos-delay="100">{{ __('tran.tech title') }}</h1>
+        <div class="col-lg-6 mx-auto mt-5 mbottom">
+            <div class=" gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <img data-aos="fade-left" class="mend" src="{{ asset('images/vue.png') }}" alt="Avatar"
+                    style="width:15%">
+                <img data-aos="fade-left" class="mend " src="{{ asset('images/react.png') }}" alt="Avatar"
+                    style="width:15%">
+                <img data-aos="fade-up" class="mend " src="{{ asset('images/laravel8.png') }}" alt="Avatar"
+                    style="width:15%">
+                <img data-aos="fade-right" class="mend " src="{{ asset('images/asp.png') }}" alt="Avatar"
+                    style="width:15%">
+                <img data-aos="fade-right" class="mend " src="{{ asset('images/dj.png') }}" alt="Avatar"
+                    style="width:15%">
             </div>
-
-            <div class="card">
-                <img src="{{ asset('images/vue.png') }}" alt="Avatar" style="width:50%">
-
-            </div>
-
-            <div class="card">
-                <img src="{{ asset('images/react.png') }}" alt="Avatar" style="width:50%">
-            </div>
-
-            <div class="card">
-                <img src="{{ asset('images/laravel8.png') }}" alt="Avatar" style="width:50%">
-            </div>
-
-            <div class="card">
-                <img src="{{ asset('images/dj.png') }}" alt="Avatar" style="width:50%">
-            </div>
-
         </div>
-        <!-- tech end -->
-    </section>
     </div>
 @endsection
 @extends('components.footer')

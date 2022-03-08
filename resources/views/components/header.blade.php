@@ -41,7 +41,8 @@
 
                 {{-- إظهار تسجيل الدخول وتسجيل حساب اذا كان مش مسجل --}}
             @else
-                <div> <a href="" id="login-btn" class="fas fa-envelope aicon"></a>
+                <div> <a href="{{ URL::route('contact-homePage', app()->getLocale()) }}" id="login-btn"
+                        class="fas fa-envelope aicon"></a>
                 </div>
 
             @endauth
