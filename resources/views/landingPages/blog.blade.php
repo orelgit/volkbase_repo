@@ -34,7 +34,7 @@
 
     <!-- posts section starts  -->
 
-    <section class="blog-container" id="readMore2">
+    <section class="blog-container " id="readMore2">
 
 
         <div style="overflow: hidden;" class="blog-posts-container" data-aos="fade-up">
