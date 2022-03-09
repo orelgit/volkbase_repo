@@ -71,6 +71,23 @@
             </div>
         </div>
 
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5  align-items-center ">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3 ">
+                <h1 data-aos="fade-up" data-aos-delay="100" class="display-5 mb-3 lh-1">
+                    {{ __('tran.SE title data') }}
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="200"> {{ __('tran.SE disc data') }}</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                    <a href="{{ URL::route('services-homePage', app()->getLocale()) }}"
+                        class="custom-btn btn-bg btn mt-3 text-white" data-aos="fade-up">{{ __('tran.btn') }}</a>
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <img class="d-block mx-lg-auto img-fluid " data-aos="fade-up" data-aos-delay="400"
+                    src=" {{ asset('images/191.svg') }}" alt="" width="400">
+            </div>
+        </div>
+
 
 
         <!-- cards -->
