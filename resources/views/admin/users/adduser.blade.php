@@ -17,7 +17,7 @@
 
                         {{-- name --}}
                         <div class="mb-3 ">
-                            <div class="col-lg-8 col-md-12">
+                            <div class="col-lg-8 col-md-12  m-auto">
                                 <label for="name" class="form-label text-black fs-5 fw-bold">الاسم</label>
                                 <input value="{{ old('u_name') }}" type="text" id="name" name="u_name"
                                     class="form-control bg-light" id="name">
@@ -30,7 +30,7 @@
 
                         {{-- phone --}}
                         <div class="mb-3">
-                            <div class="col-lg-8 col-md-12">
+                            <div class="col-lg-8 col-md-12  m-auto">
                                 <label for="phone" class="form-label text-black fs-5 fw-bold">رقم الهاتف</label>
                                 <input value="{{ old('u_mobile') }}" class="form-control bg-light" type="text" id="number"
                                     name="u_mobile" id="phone">
@@ -42,7 +42,7 @@
 
                         {{-- email --}}
                         <div class="mb-3">
-                            <div class="col-lg-8 col-md-12">
+                            <div class="col-lg-8 col-md-12  m-auto">
                                 <label for="email" class="form-label text-black fs-5 fw-bold">البريد الالكتروني</label>
                                 <input value="{{ old('u_email') }}" type="email" id="email" name="u_email"
                                     class="form-control bg-light">
@@ -54,7 +54,7 @@
 
                         {{-- password --}}
                         <div class="mb-3">
-                            <div class="col-lg-8 col-md-12">
+                            <div class="col-lg-8 col-md-12  m-auto">
                                 <label for="password" class="form-label text-black fs-5 fw-bold">كلمة المرور</label>
                                 <input type="password" id="password" name="password" class="form-control bg-light">
                                 @error('password')
@@ -64,7 +64,7 @@
                         </div>
 
                         {{-- img --}}
-                        <div class="col-lg-8 col-md-12">
+                        <div class="col-lg-8 col-md-12  m-auto">
                             <div class="mb-3">
                                 <label for="img" class="form-label text-black fs-5 fw-bold">الصورة</label>
                                 <input value="{{ old('u_photo') }}" type="file" id="img" name="u_photo"
@@ -77,7 +77,7 @@
 
                         {{-- user type --}}
                         <div class="mb-3">
-                            <div class="col-lg-8 col-md-12">
+                            <div class="col-lg-8 col-md-12  m-auto">
                                 <label for="user_type" class="form-label text-black fs-5 fw-bold">نوع المستخدم</label>
                                 <select class="form-control form-select bg-light " id="user_type" name="ut_id">
                                     @php
@@ -92,7 +92,7 @@
 
 
                         <div class="mb-3">
-                            <div class="col-lg-6 col-md-12 ">
+                            <div class="col-lg-6 col-md-12  m-auto">
                                 <button type="submit" class="btn btn-primary form-control">إضافة</button>
                             </div>
                         </div>

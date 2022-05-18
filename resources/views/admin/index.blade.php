@@ -20,7 +20,7 @@
                             <div class="col mr-2">
                                 <a class=" text-danger mb-1 fw-bold" href="/admin/Edit-user"> المستخدمين </a>
 
-                                <div class="mb-0 text-secondary h5 fw-bold">20</div>
+                                <div class="mb-0 text-secondary h5 fw-bold">{{ $users }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-users fa-2x text-secondary fw-bold"></i>
@@ -38,7 +38,7 @@
                             <div class="col mr-2">
 
                                 <a href="/admin/Edit-blog" class="fw-bold text-warning  mb-1">المقالات</a>
-                                <div class="mb-0 text-secondary h5 fw-bold">20</div>
+                                <div class="mb-0 text-secondary h5 fw-bold">{{ $posts }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fal fa-newspaper fa-2x text-secondary fw-bold"></i>
@@ -78,8 +78,11 @@
                     </div>
                     <div class="card-body">
                         <div class="text-center">
-                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                src="{{ asset('images/admin/undraw_picture_re_ne03.svg') }}" alt="">
+                            {{-- @foreach (\App\Models\Blog::all() as $lastpost) --}}
+                            {{-- <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                src="{{ asset('storage/' . $lastpost) }}" alt=""> --}}
+                            {{-- @endforeach --}}
+                            {{ $lastpost }}
                         </div>
                         <a href="{{ URL::route('admin-CreateBlog') }}"
                             class=" d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i

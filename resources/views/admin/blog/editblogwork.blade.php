@@ -17,7 +17,7 @@
                         @method('PATCH')
                         {{-- title --}}
                         <div class="mb-3 ">
-                            <div class="col-lg-6 col-md-12">
+                            <div class="col-lg-6 col-md-12 ">
                                 <label for="title" class="form-label text-black fs-5 fw-bold">عنوان المقالة</label>
                                 <input value="{{ $blog->b_title }}" type="text" class="form-control bg-light" id="title"
                                     type="text" name="b_title">

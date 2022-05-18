@@ -41,6 +41,7 @@
             @php
                 $user = \App\Models\User::all();
                 $category = \App\Models\Category::all();
+                $blogs = \App\Models\Blog::all();
             @endphp
             @foreach ($blogs as $blog)
                 <div class="blog-post">
@@ -56,7 +57,7 @@
                             <i class="far fa-user"></i>
                             <span>{{ $blog->user->u_name }}</span>
                         </a>
-                        <a href="" class="blog-user">
+                        <a href="blog/category/{{ $blog->category->c_id }}" class="blog-user">
                             <i class="far fa-dot-circle"></i>
                             <span>{{ $blog->category->c_name }}</span>
                         </a>

@@ -172,13 +172,14 @@
                             <li class=" nav-item dropdown">
                                 <div class="nav-link  text-primary" id="navbarDropdown" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="fs-5">nada</span>
-                                    <img style="width: 40px" src="{{ asset('images/admin/logoIcon.png') }}" alt="bb"
-                                        class="img-fluid img-thumbnail rounded-circle">
+                                    <span class="fs-5">{{ auth()->user()->u_name }}</span>
+                                    <img style="width: 40px" src="{{ asset('storage/' . auth()->user()->u_photo) }}"
+                                        alt="bb" class="img-fluid img-thumbnail rounded-circle">
 
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item text-primary" href="#!">الملف الشخصي</a>
+
+                                    <a class="dropdown-item text-primary" href="/admin/user/profile">الملف الشخصي</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item text-primary" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal" href="#!">تسجيل الخروج</a>
@@ -209,7 +210,10 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
-                    <button type="button" class="btn btn-primary">نعم</button>
+                    <form class="" action="logout" method="POST">
+                        @csrf
+                        <button class="btn btn-primary" type="submit">تسجيل الخروج</button>
+                    </form>
                 </div>
             </div>
         </div>

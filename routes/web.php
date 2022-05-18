@@ -5,6 +5,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\Admin;
+use App\Models\Category;
+use App\Models\Blog;
+
+
 // use App\Http\Controllers\Admin\AdminPagesController;
 // use App\Http\Controllers\Admin\Blog\BlogController;
 
@@ -21,12 +25,25 @@ use App\Http\Controllers\Admin;
 
 route::redirect('/', '/en');
 
+
+// ------------>الانتقال الى الصفحة حسب الفئة<------------
+
+// Route::get('blog/{category}', [Admin\Blog\BlogController::class, 'ShowBlogPage'])->name('blog-homePage');
+
+// Route::get('category/{category}', function (Blog $blog) {
+//  return view('landingPages.blog', [
+//   'blog' => '$blog'
+//  ]);
+// });
+
 Route::group(['prefix' => '{lang}'], function () {
  // ------------>الانتقال الى الصفحة الرئيسية<------------
  Route::get('/', [HomeController::class, 'index'])->name('index-homePage');
 
  // ------------>الانتقال الى الصفحة البلوق<------------
- Route::get('blog', [HomeController::class, 'blog'])->name('blog-homePage');
+ Route::get('blog', [Admin\Blog\BlogController::class, 'ShowBlogPage'])->name('blog-homePage');
+
+
 
  // ------------>الانتقال الى الصفحة الخدمات<------------
  Route::get('services', [HomeController::class, 'services'])->name('services-homePage');
@@ -86,7 +103,13 @@ Route::middleware('admin')->group(function () {
  Route::post('admin/add-user', [Admin\Users\UsersController::class, 'store'])->name('admin-adduser');
  // -----------> edit user <---------------------------
  Route::get('admin/Edit-user', [Admin\Users\UsersController::class, 'EditUser'])->name('admin-EditUser');
+ Route::get('admin/user/edit/{user}', [Admin\Users\UsersController::class, 'EditUserWork'])->name('admin-EditUser-work');
+ Route::patch('admin/user/{user}', [Admin\Users\UsersController::class, 'UpdateUser'])->name('admin-UpdateUser-work');
+ Route::delete('admin/user/{user}', [Admin\Users\UsersController::class, 'DestroyUser'])->name('admin-DestroyUser-work');
+
+ //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> profile <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ Route::get('admin/user/profile', [Admin\Users\UsersController::class, 'ShowProfile'])->name('admin-ShowProfile');
+ Route::get('admin/edit/profile/{user}', [Admin\Users\UsersController::class, 'EditProfile'])->name('admin-EditProfile');
+ Route::patch('admin/edit/profile/{user}', [Admin\Users\UsersController::class, 'UpdateProfile'])->name('admin-UpdateProfile');
 });
-Route::get('admin/user/edit/{user}', [Admin\Users\UsersController::class, 'EditUserWork'])->name('admin-EditUser-work');
-Route::patch('admin/user/{user}', [Admin\Users\UsersController::class, 'UpdateUser'])->name('admin-UpdateUser-work');
-Route::delete('admin/user/{user}', [Admin\Users\UsersController::class, 'DestroyUser'])->name('admin-DestroyUser-work');

@@ -5,12 +5,24 @@ namespace App\Http\Controllers\Admin\Blog;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
+use App\Models\Category;
 use App\Models\Blog;
 
 class BlogController extends Controller
 {
 
+    // Showing the blog page
+    public function ShowBlogPage()
+    {
+        return view('landingPages.blog', [
+            'blogs' => Blog::latest()->filter(
+                request(['category'])
+            )->paginate(18)->withQueryString()
+        ]);
+    }
+
+
+    //////////> Admin work with blog <////////////  
     public function create()
     {
         return view('admin.blog.addpost');
@@ -58,15 +70,17 @@ class BlogController extends Controller
     {
         // go to edit page
         return view('admin.blog.editpost', [
-            'blogs' => Blog::paginate(50)
+            'blogs' => Blog::latest()->paginate(50)
         ]);
     }
+
 
     public function EditBlogWork(Blog $blog)
     {
         // do edit work
         return view('Admin.Blog.editblogwork', ['blog' => $blog]);
     }
+
 
     // update
     public function UpdateBlog(Request $request, Blog $blog)

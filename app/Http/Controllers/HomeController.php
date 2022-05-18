@@ -12,12 +12,6 @@ class HomeController extends Controller
         return view('landingPages.index');
     }
 
-    // الانتقال الى صفحة البلوق
-    public function blog()
-    {
-        return view('landingPages.blog');
-    }
-
     // الانتقال الى صفحة الخدمات
     public function services()
     {

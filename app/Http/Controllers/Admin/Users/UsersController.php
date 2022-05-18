@@ -6,15 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use Illuminate\Validation\Rule;
+
 
 class UsersController extends Controller
 {
-    // الذهاب الى واجهه ال
+    // الذهاب الى واجهة
     public function create()
     {
         return view('admin.users.adduser');
     }
 
+    // التحقيق من كل الانبوت
     public function rules()
     {
         return [
@@ -26,6 +29,19 @@ class UsersController extends Controller
             'ut_id' => 'required'
         ];
     }
+    // التحقق من بعض الانبوت
+    public function SpecificRules(?User $user = null): array
+    {
+        $user ??= new User();
+
+        return [
+            'u_name' => 'required|min:3|max:30',
+            'u_mobile' => 'required|min:9|numeric',
+            'u_email' => ['required', 'email', 'max:255', Rule::unique('users', 'u_email')->ignore($user)],
+            'u_photo' => $user->exists ? ['required', 'image'] : ['image'],
+        ];
+    }
+    // رسائل الاخطاء الى العربية
     public function msgs()
     {
         return [
@@ -44,10 +60,13 @@ class UsersController extends Controller
             'password.required' => 'من فضلك أدخل رقمك السري',
             'password.max' => 'يجب أن تتكون كلمة المرور الخاصة بك من أقل من 250 حرفًا',
             'password.min' => 'يجب أن تتكون كلمة المرور الخاصة بك من 7 أحرف',
-            'ut_id.required' => 'ادخل النوع'
+            'ut_id.required' => 'ادخل النوع',
+            'u_photo.required' => ' يجب اعادة اختيار صورة جديدة او نفسها',
+
         ];
     }
 
+    // إضافة مستخدم جديد
     public function store(Request $request)
     {
         $valid = Validator::make($request->all(), $this->rules(), $this->msgs());
@@ -66,13 +85,15 @@ class UsersController extends Controller
         }
         return back()->with('success', 'تم إضافة المستخدم بنجاح');
     }
+    // الذهاب الى جدول المستخدمين
     public function EditUser()
     {
         // go to edit page
         return view('admin.Users.edituser', [
-            'users' => User::paginate(50)
+            'users' => User::latest()->paginate(50)
         ]);
     }
+    // عرض المستخدم المعين
     public function EditUserWork(User $user)
     {
         // do edit work
@@ -80,27 +101,64 @@ class UsersController extends Controller
     }
 
 
-
+    // تحديث المستخدم
     // update user
-    public function UpdateUser(Request $request, User $user)
+    public function UpdateUser(User $user, Request $request)
     {
-        $valid = Validator::make($request->all(), $this->rules(), $this->msgs());
+        $valid = Validator::make(request()->all(), $this->SpecificRules($user), $this->msgs());
+
         if ($valid->fails()) {
             // return 'Error';
-            return back()->withErrors($valid)->withInput($request->all());
+            return back()->withErrors($valid)->withInput(request()->all());
         } else {
             $user->update([
                 'u_name' => request()->u_name,
                 'u_mobile' => request()->u_mobile,
+                'u_email' => request()->u_email,
+                // 'u_photo' => request()->u_photo,
                 'ut_id' => request()->ut_id,
             ]);
         }
-
-        return back()->with('success', 'تم تحديث المستخدم بنجاح');
+        return back()->with('success', 'تم التحديث  بنجاح');
     }
+    // حذف مستخدم
     public function DestroyUser(User $user)
     {
         $user->delete();
         return back()->with('success', 'تم حذف المستخدم بنجاح');
+    }
+
+
+    // Show User Profile
+    // البروفايل للمستخدم الحالي
+    public function ShowProfile(User $user)
+    {
+        // show the page
+        return view('Admin.profile.profilePage', ['user' => $user]);
+    }
+
+    public function EditProfile(User $user)
+    {
+        return view('Admin.profile.editProfile', ['user' => $user]);
+    }
+
+    // profile
+    public function UpdateProfile(User $user, Request $request)
+    {
+
+
+        $valid = Validator::make(request()->all(), $this->SpecificRules($user), $this->msgs());
+        if ($valid->fails()) {
+            // return 'Error';
+            return back()->withErrors($valid)->withInput(request()->all());
+        } else {
+            $user->update([
+                'u_name' => request()->u_name,
+                'u_mobile' => request()->u_mobile,
+                'u_email' => request()->u_email,
+                'u_photo' => request()->file('u_photo')->store('Usersimg'),
+            ]);
+        }
+        return back()->with('success', 'تم التحديث  بنجاح');
     }
 }
